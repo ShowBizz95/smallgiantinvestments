@@ -125,11 +125,13 @@
             display: block;
             font-weight: 500;
             transition: var(--transition);
+            text-decoration: none; /* Removed underlines */
         }
         
         .nav-links a:hover {
             background-color: var(--secondary-blue);
             color: var(--accent-gold);
+            text-decoration: none; /* Ensure hover doesn't underline */
         }
         
         .mobile-menu-btn {
@@ -660,362 +662,35 @@
     </style>
 </head>
 <body>
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/264818988127?text=Hello%20Small%20Giant%20Investment!%20I'm%20interested%20in%20your%20services." 
-       class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
-    <!-- Header with Hero Section -->
+    <!-- Header Section -->
     <header>
         <div class="header-content">
             <h1>Small Giant Investment cc</h1>
             <div class="slogan">Sheer Obsession!</div>
-            <p class="tagline">Creating new businesses and helping existing businesses expand</p>
-            <div class="year-badge">Established 2023</div>
+            <div class="tagline">Providing creative, environmental, HR, agricultural, and general business services in Namibia.</div>
+            <div class="year-badge">2023</div>
         </div>
     </header>
 
-    <!-- Sticky Navigation -->
+    <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-mountain"></i>
-                <span>Small</span>Giant
-            </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                <li><a href="#team"><i class="fas fa-users"></i> Our Team</a></li>
-                <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
-                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
-                <li><a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            <div class="logo">Small <span>Giant</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
     </nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">About Us</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p><strong>Small Giant Investment cc</strong> is a fully Namibian-owned company that was established in 2023 and registered in July 2023 with the Ministry of Trade and Industry and other relevant business bodies.</p>
-                <p>We operate to various specifications and employ dedicated and qualified staff. The group provides services to different clients depending on their needs.</p>
-                <p>Our team is equipped with Industry 4.0 Employability Skills such as Analytical Thinking and Innovation; Reasoning, Problem-solving and Ideation; Complex Problem-solving; Critical Thinking and Analysis; Creativity, Originality and Initiative; Leadership and Social Influence; Technology use, Persuasion and Negotiation.</p>
-            </div>
-            <div class="mission-vision">
-                <h3><i class="fas fa-bullseye"></i> Our Mission & Vision</h3>
-                <p><strong>Mission:</strong> To create new businesses and help existing businesses expand.</p>
-                <p><strong>Vision:</strong> A vibrant rural economy driven by new and growing businesses.</p>
-            </div>
-        </div>
-    </section>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/264812345678" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- Team Section -->
-    <section id="team">
-        <h2 class="section-title">Our Team</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Paulus Namupala">
-                <h3>Paulus Namupala</h3>
-                <p>Managing Director / CEO</p>
-            </div>
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80" alt="David Williamson">
-                <h3>David Williamson</h3>
-                <p>Director: Operations</p>
-            </div>
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80" alt="Panduleni Hans">
-                <h3>Panduleni Hans</h3>
-                <p>Director: Technical Services</p>
-            </div>
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Eva V.N Petrus">
-                <h3>Eva V.N Petrus</h3>
-                <p>Manager: Finance & Administration</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2 class="section-title">Our Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80" alt="Creative Signage">
-                <div class="portfolio-overlay">
-                    <h3>Creative Signage</h3>
-                    <p>Brand identity and business signage projects</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Environmental Management">
-                <div class="portfolio-overlay">
-                    <h3>Environmental Projects</h3>
-                    <p>EIA assessments and environmental planning</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80" alt="Agricultural Services">
-                <div class="portfolio-overlay">
-                    <h3>Agricultural Solutions</h3>
-                    <p>Irrigation systems and farming consultancy</p>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" alt="Construction Services">
-                <div class="portfolio-overlay">
-                    <h3>Construction & Renovation</h3>
-                    <p>Building and infrastructure projects</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3><i class="fas fa-paint-brush"></i> Creative Services</h3>
-                <ul>
-                    <li>Brand Audits</li>
-                    <li>Fleet Graphics & Sign Writing</li>
-                    <li>COVID & Safety Signage</li>
-                    <li>Poster Signage & Floor Graphics</li>
-                    <li>PPE Products & Face Shields</li>
-                    <li>Perspex Dividers & Sneeze Guards</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-leaf"></i> Environmental Management</h3>
-                <ul>
-                    <li>Environmental Impact Assessments (EIAs)</li>
-                    <li>Environmental Management Plans (EMPs)</li>
-                    <li>Waste Management & Pollution Control</li>
-                    <li>Environmental Monitoring</li>
-                    <li>Legal Compliance Evaluation</li>
-                    <li>Rehabilitation Plans</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-laptop-code"></i> Digital Marketing</h3>
-                <ul>
-                    <li>Content Writing</li>
-                    <li>Website Analysis & Optimization</li>
-                    <li>Social Media Marketing</li>
-                    <li>Email Marketing & Multimedia</li>
-                    <li>Website Creation</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-users-cog"></i> HR Services</h3>
-                <ul>
-                    <li>Attraction & Retention Strategies</li>
-                    <li>Job Evaluation & Profiling</li>
-                    <li>Career Development & Talent Management</li>
-                    <li>Performance Management</li>
-                    <li>Remuneration Strategy & Policy</li>
-                    <li>Compliance with Legislation</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-tractor"></i> Agricultural Services</h3>
-                <ul>
-                    <li>Land Evaluation</li>
-                    <li>Irrigation System Installations</li>
-                    <li>Water Tank Stands/Tower Welding</li>
-                    <li>Agricultural Shade Net Supply</li>
-                    <li>Chemical Insecticide/Herbicide</li>
-                    <li>Agricultural Consultancy</li>
-                </ul>
-            </div>
-            <div class="service-card">
-                <h3><i class="fas fa-tools"></i> General Services</h3>
-                <ul>
-                    <li>Transportation & Renovation</li>
-                    <li>De-bushing & Welding</li>
-                    <li>Plumbing & Road Construction</li>
-                    <li>CCTV & Alarm Installation</li>
-                    <li>Electrical Fencing</li>
-                    <li>Cleaning Services</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2 class="section-title">What Our Clients Say</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial">
-                <p>"Small Giant Investment transformed our business signage with incredible professionalism and attention to detail. Their creative team understood our brand perfectly!"</p>
-                <h4>- Local Retail Business, Windhoek</h4>
-            </div>
-            <div class="testimonial">
-                <p>"The environmental management plan they developed for our farm was comprehensive and compliant with all regulations. Highly recommended for agricultural services!"</p>
-                <h4>- Farm Owner, Omaheke Region</h4>
-            </div>
-            <div class="testimonial">
-                <p>"Their HR services helped us streamline our recruitment process and develop effective retention strategies. Our employee satisfaction has improved significantly."</p>
-                <h4>- SME Business Owner</h4>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">Contact Us</h2>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>We're ready to help your business grow. Contact us for more information about our services or request a free quote.</p>
-                
-                <div class="contact-details">
-                    <p><i class="fas fa-phone"></i> <a href="tel:+264818988127">+264 81 8988 127</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:Paulus.Namupala@protonmail.org">Paulus.Namupala@protonmail.org</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> 1066 Etwangoma Street, Windhoek, Namibia</p>
-                    <p><i class="fas fa-globe"></i> <a href="https://www.tinygiantgroup.na" target="_blank">www.tinygiantgroup.na</a></p>
-                </div>
-                
-                <div class="quote">
-                    <p>"Every problem is a gift - without problems we would not grow."</p>
-                </div>
-                
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119190.28587641013!2d17.0113655!3d-22.56088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b1b3b3b3b3b3b%3A0x3b3b3b3b3b3b3b3b!2sWindhoek%2C%20Namibia!5e0!3m2!1sen!2s!4v1691234567890!5m2!1sen!2s" 
-                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
-                            title="Small Giant Investment Location in Windhoek"></iframe>
-                </div>
-            </div>
-            
-            <div class="contact-form">
-                <h3>Request a Quote</h3>
-                <form id="quoteForm">
-                    <input type="text" placeholder="Your Full Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
-                    <input type="tel" placeholder="Your Phone Number">
-                    <select required>
-                        <option value="">Select Service Category</option>
-                        <option value="creative">Creative Services</option>
-                        <option value="environmental">Environmental Management</option>
-                        <option value="digital">Digital Marketing</option>
-                        <option value="hr">HR Services</option>
-                        <option value="agricultural">Agricultural Services</option>
-                        <option value="general">General Services</option>
-                        <option value="multiple">Multiple Services</option>
-                    </select>
-                    <textarea placeholder="Tell us about your project or requirements..." rows="5" required></textarea>
-                    <button type="submit"><i class="fas fa-paper-plane"></i> Submit Request</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="passionate-notice">
-                <p>We are passionate about service delivery to existing and new businesses, and we understand that customer service is the backbone of any business.</p>
-            </div>
-            
-            <div class="footer-links">
-                <a href="#about">About Us</a>
-                <a href="#team">Our Team</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#services">Services</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023-2024 Small Giant Investment cc – Sheer Obsession! All rights reserved.</p>
-                <p>Fully Namibian-owned | Registered with Ministry of Trade and Industry</p>
-                <p style="margin-top: 15px; font-size: 0.8rem;">Website designed with passion for Small Giant Investment's vision</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.getElementById('navLinks').classList.remove('active');
-            });
-        });
-        
-        // Sticky navigation background on scroll
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.backgroundColor = 'rgba(0, 51, 102, 0.95)';
-            } else {
-                nav.style.backgroundColor = 'var(--primary-blue)';
-            }
-        });
-        
-        // Form Submission Handler
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your request! We will contact you within 24 hours.');
-            this.reset();
-        });
-        
-        // Simple testimonial slider (auto-rotate every 5 seconds)
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial');
-        
-        function showNextTestimonial() {
-            testimonials.forEach(testimonial => {
-                testimonial.style.display = 'none';
-            });
-            
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            testimonials[currentTestimonial].style.display = 'block';
-        }
-        
-        // Initialize testimonials
-        if (testimonials.length > 0) {
-            testimonials.forEach((testimonial, index) => {
-                testimonial.style.display = index === 0 ? 'block' : 'none';
-            });
-            
-            // Auto-rotate testimonials every 5 seconds
-            setInterval(showNextTestimonial, 5000);
-        }
-        
-        // Add animation to elements when they scroll into view
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe service cards and team cards
-        document.querySelectorAll('.service-card, .team-card, .portfolio-item').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>
