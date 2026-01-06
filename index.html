@@ -2,227 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Small Giant Investments cc</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <title>Small Giant Investments</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f4f6f5;
+      padding: 0;
+      background-color: #f4f4f4;
       color: #333;
-      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
-
-    /* HERO / HEADER */
     header {
-      background: 
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      padding: 80px 20px;
+      background-color: #0b3d91;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
-
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    /* NAV */
-    nav {
-      background: #1f3d2b;
-      padding: 12px;
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
       text-align: center;
     }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    a {
+      color: #0b3d91;
       text-decoration: none;
       font-weight: bold;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* SECTIONS */
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-      background: #fff;
-      margin-top: 25px;
-      border-radius: 6px;
-    }
-
-    h2 {
-      color: #1f3d2b;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    /* SERVICES GRID */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .service-box {
-      background: #f4f6f5;
-      padding: 20px;
-      border-radius: 6px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 0.9em;
-      color: #666;
-    }
   </style>
 </head>
-
 <body>
-
-<header>
-  <h1>Small Giant Investments cc</h1>
-  <p>
-    Creating new businesses and helping existing businesses expand —  
-    driving a vibrant rural and urban economy in Namibia.
-  </p>
-</header>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#vision">Vision & Mission</a>
-  <a href="#services">Services</a>
-  <a href="#subsidiaries">Subsidiaries</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section id="about">
-  <h2>About Us</h2>
-  <p>
-    Small Giant Investments cc is a fully Namibian-owned company established in 2023.
-    The company operates across multiple sectors, providing professional, technical,
-    and business development services tailored to client needs.
-  </p>
-</section>
-
-<section id="vision">
-  <h2>Vision</h2>
-  <p>
-    A vibrant rural economy driven by new and growing businesses.
-  </p>
-
-  <h2>Mission</h2>
-  <p>
-    To create new businesses and help existing businesses expand.
-  </p>
-</section>
-
-<section id="services">
-  <h2>Our Services</h2>
-
-  <div class="services">
-    <div class="service-box">
-      <h3>Creative & Branding</h3>
-      <ul>
-        <li>Brand Audits</li>
-        <li>Design & Sign Writing</li>
-        <li>Fleet & Safety Graphics</li>
-        <li>PPE & Protective Installations</li>
-      </ul>
-    </div>
-
-    <div class="service-box">
-      <h3>Environmental Management</h3>
-      <ul>
-        <li>Environmental Impact Assessments</li>
-        <li>Environmental Management Plans</li>
-        <li>Waste & Pollution Control</li>
-        <li>Environmental Compliance</li>
-      </ul>
-    </div>
-
-    <div class="service-box">
-      <h3>Digital & Online Marketing</h3>
-      <ul>
-        <li>Website Creation & Optimization</li>
-        <li>Content Writing</li>
-        <li>Social Media Marketing</li>
-        <li>Email Marketing</li>
-      </ul>
-    </div>
-
-    <div class="service-box">
-      <h3>HR & Business Consulting</h3>
-      <ul>
-        <li>Performance Management</li>
-        <li>Talent Development</li>
-        <li>HR Policies & Compliance</li>
-        <li>Succession Planning</li>
-      </ul>
-    </div>
-
-    <div class="service-box">
-      <h3>Agricultural Services</h3>
-      <ul>
-        <li>Land Evaluation</li>
-        <li>Irrigation Systems</li>
-        <li>Agricultural Consultancy</li>
-        <li>Shade Net Supply</li>
-      </ul>
-    </div>
-
-    <div class="service-box">
-      <h3>General Services</h3>
-      <ul>
-        <li>Renovation & Construction</li>
-        <li>Welding & Plumbing</li>
-        <li>Security Installations</li>
-        <li>Cleaning Services</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="subsidiaries">
-  <h2>Subsidiaries</h2>
-  <p>
-    • Rabbitman – Sustainable Rabbit Farming  
-    <br>
-    • Additional business units under development
-  </p>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    📞 +264 81 8988 127<br>
-    📧 Paulus.Namupala@protonmail.org<br>
-    📍 1066 Etwangoma Street, Windhoek<br>
-    🌐 www.smallgiantinvestments.na
-  </p>
-</section>
-
-<footer>
-  © 2026 Small Giant Investments cc. All rights reserved.
-</footer>
-
+  <header>
+    <h1>Small Giant Investments</h1>
+  </header>
+  <main>
+    <p>Welcome to Small Giant Investments! We are committed to helping your business grow and thrive. Our portfolio includes innovative solutions and investments that make a real difference.</p>
+    <p>Visit our subsidiary <a href="#">Rabbitman</a> for more exciting projects!</p>
+  </main>
+  <footer>
+    &copy; 2026 Small Giant Investments. All rights reserved.
+  </footer>
 </body>
 </html>
