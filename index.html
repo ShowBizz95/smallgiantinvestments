@@ -1,182 +1,663 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiny Giant Group – Sheer Obsession!</title>
-  <style>
-    /* Reset & global */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #333; }
-    a { text-decoration: none; color: inherit; }
-
-    /* Header / Hero */
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534790566855-4cb788d389ec?auto=format&fit=crop&w=1350&q=80');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-      padding: 120px 20px;
-    }
-    header h1 { font-size: 3rem; margin-bottom: 10px; }
-    header p { font-size: 1.3rem; max-width: 800px; margin: auto; }
-
-    /* Navigation */
-    nav { background: #222; display: flex; justify-content: center; }
-    nav a { color: #fff; padding: 15px 20px; display: block; transition: background 0.3s; }
-    nav a:hover { background: #444; }
-
-    /* Sections */
-    section { padding: 60px 20px; max-width: 1000px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 30px; color: #222; }
-
-    /* Cards / Services */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { border: 1px solid #ddd; padding: 20px; border-radius: 6px; background: #fafafa; }
-
-    /* Team */
-    .team-member { text-align: center; padding: 20px; border: 1px solid #ddd; border-radius: 6px; background: #f5f5f5; }
-    .team-member h3 { margin-bottom: 5px; }
-    .team-member p { font-size: 0.9rem; color: #555; }
-
-    /* Contact */
-    .contact p { margin: 8px 0; }
-
-    /* Footer */
-    footer { background: #222; color: #fff; text-align: center; padding: 30px 20px; font-size: 0.9rem; }
-
-    /* Responsive text */
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiny Giant Group – Sheer Obsession!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* === CSS Reset & Variables === */
+        :root {
+            --primary-blue: #003366;
+            --secondary-blue: #00509e;
+            --accent-gold: #d4af37;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+        
+        /* === Header & Navigation === */
+        header {
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 80, 158, 0.9)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 140px 20px 100px;
+            position: relative;
+        }
+        
+        .header-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header-content .tagline {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+        
+        .year-badge {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* Sticky Navigation */
+        nav {
+            background-color: var(--primary-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: var(--accent-gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            position: relative;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            padding: 20px 18px;
+            display: block;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            background-color: var(--secondary-blue);
+            color: var(--accent-gold);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* === Main Content Sections === */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-blue);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-gold);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .mission-vision {
+            flex: 1;
+            min-width: 300px;
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent-gold);
+        }
+        
+        .mission-vision h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .mission-vision p {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .mission-vision p:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 4px solid var(--primary-blue);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .team-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .team-card h3 {
+            color: var(--primary-blue);
+            margin: 20px 0 5px;
+        }
+        
+        .team-card p {
+            color: var(--secondary-blue);
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .service-card h3 i {
+            color: var(--accent-gold);
+        }
+        
+        .service-card ul {
+            list-style: none;
+        }
+        
+        .service-card li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .service-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-blue);
+            font-weight: bold;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--light-gray);
+            border-radius: 10px;
+            padding: 60px;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-details i {
+            color: var(--accent-gold);
+            width: 20px;
+        }
+        
+        .contact-details a {
+            color: var(--secondary-blue);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-details a:hover {
+            color: var(--primary-blue);
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 50px 20px 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .confidential-notice {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .quote {
+            font-style: italic;
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 20px;
+            border-left: 3px solid var(--accent-gold);
+            background: rgba(255,255,255,0.05);
+        }
+        
+        /* === Responsive Design === */
+        @media (max-width: 992px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-blue);
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .header-content .tagline {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            .contact-section {
+                padding: 40px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .services-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header with Hero Section -->
+    <header>
+        <div class="header-content">
+            <h1>Tiny Giant Group</h1>
+            <p class="tagline">Sheer Obsession! – Creating new businesses and helping existing businesses expand</p>
+            <div class="year-badge">Established 2023</div>
+        </div>
+    </header>
 
-  <!-- Header / Hero -->
-  <header>
-    <h1>Tiny Giant Group – Sheer Obsession!</h1>
-    <p>Fully Namibian-owned company providing innovative services across multiple sectors, delivering excellence with a passionate and skilled team.</p>
-  </header>
+    <!-- Sticky Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>Tiny</span>Giant
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#team"><i class="fas fa-users"></i> Our Team</a></li>
+                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Our Services</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About Us</a>
-    <a href="#team">Our Team</a>
-    <a href="#services">Our Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>Tiny Giant Group cc</strong> is a fully Namibian-owned company that was established in 2023 and registered in July 2023 with the Ministry of Trade and Industry and other relevant business bodies.</p>
+                <p>We operate to various specifications and employ dedicated and qualified staff. The group provides services to different clients depending on their needs.</p>
+                <p>Our team is equipped with Industry 4.0 Employability Skills such as Analytical Thinking and Innovation; Reasoning, Problem-solving and Ideation; Complex Problem-solving; Critical Thinking and Analysis; Creativity, Originality and Initiative; Leadership and Social Influence; Technology use, Persuasion and Negotiation.</p>
+            </div>
+            <div class="mission-vision">
+                <h3><i class="fas fa-bullseye"></i> Our Mission & Vision</h3>
+                <p><strong>Mission:</strong> To create new businesses and help existing businesses expand.</p>
+                <p><strong>Vision:</strong> A vibrant rural economy driven by new and growing businesses.</p>
+                <p>We are passionate about service delivery to existing and new businesses, and we understand that customer service is the backbone of any business.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- About Us -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Tiny Giant Group cc is a fully Namibian-owned company, established and registered in 2023. We operate across multiple sectors and employ dedicated, qualified staff. Our group provides services to different clients depending on their needs, combining innovation, quality, and industry 4.0 employability skills.
-    </p>
-    <p><strong>Mission:</strong> To create new businesses and help existing businesses expand.</p>
-    <p><strong>Vision:</strong> A vibrant rural economy driven by new and growing businesses.</p>
-  </section>
+    <!-- Team Section -->
+    <section id="team">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Paulus Namupala">
+                <h3>Paulus Namupala</h3>
+                <p>Managing Director / CEO</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80" alt="David Williamson">
+                <h3>David Williamson</h3>
+                <p>Director: Operations</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80" alt="Panduleni Hans">
+                <h3>Panduleni Hans</h3>
+                <p>Director: Technical Services</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Eva V.N Petrus">
+                <h3>Eva V.N Petrus</h3>
+                <p>Manager: Finance & Administration</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Our Team -->
-  <section id="team">
-    <h2>Our Team</h2>
-    <div class="grid">
-      <div class="team-member">
-        <h3>Paulus Namupala</h3>
-        <p>Managing Director</p>
-      </div>
-      <div class="team-member">
-        <h3>David Williamson</h3>
-        <p>Director: Operations</p>
-      </div>
-      <div class="team-member">
-        <h3>Panduleni Hans</h3>
-        <p>Director: Technical Services</p>
-      </div>
-      <div class="team-member">
-        <h3>Eva V.N Petrus</h3>
-        <p>Manager: Finance & Administration</p>
-      </div>
-    </div>
-  </section>
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3><i class="fas fa-paint-brush"></i> Creative Services</h3>
+                <ul>
+                    <li>Brand Audits</li>
+                    <li>Fleet Graphics & Sign Writing</li>
+                    <li>COVID & Safety Signage</li>
+                    <li>Poster Signage & Floor Graphics</li>
+                    <li>PPE Products & Face Shields</li>
+                    <li>Perspex Dividers & Sneeze Guards</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-leaf"></i> Environmental Management</h3>
+                <ul>
+                    <li>Environmental Impact Assessments (EIAs)</li>
+                    <li>Environmental Management Plans (EMPs)</li>
+                    <li>Waste Management & Pollution Control</li>
+                    <li>Environmental Monitoring</li>
+                    <li>Legal Compliance Evaluation</li>
+                    <li>Rehabilitation Plans</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-laptop-code"></i> Digital Marketing</h3>
+                <ul>
+                    <li>Content Writing</li>
+                    <li>Website Analysis & Optimization</li>
+                    <li>Social Media Marketing</li>
+                    <li>Email Marketing & Multimedia</li>
+                    <li>Website Creation</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-users-cog"></i> HR Services</h3>
+                <ul>
+                    <li>Attraction & Retention Strategies</li>
+                    <li>Job Evaluation & Profiling</li>
+                    <li>Career Development & Talent Management</li>
+                    <li>Performance Management</li>
+                    <li>Remuneration Strategy & Policy</li>
+                    <li>Compliance with Legislation</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-tractor"></i> Agricultural Services</h3>
+                <ul>
+                    <li>Land Evaluation</li>
+                    <li>Irrigation System Installations</li>
+                    <li>Water Tank Stands/Tower Welding</li>
+                    <li>Agricultural Shade Net Supply</li>
+                    <li>Chemical Insecticide/Herbicide</li>
+                    <li>Agricultural Consultancy</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-tools"></i> General Services</h3>
+                <ul>
+                    <li>Transportation & Renovation</li>
+                    <li>De-bushing & Welding</li>
+                    <li>Plumbing & Road Construction</li>
+                    <li>CCTV & Alarm Installation</li>
+                    <li>Electrical Fencing</li>
+                    <li>Cleaning Services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <!-- Our Services -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Creative Services</h3>
-        <ul>
-          <li>Brand Audits</li>
-          <li>Fleet Graphics & Sign Writing</li>
-          <li>COVID / Safety Signage</li>
-          <li>Posters, Floor Graphics, PPE Products</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Environmental Management</h3>
-        <ul>
-          <li>Environmental Impact Assessments (EIAs)</li>
-          <li>Environmental Management Plans (EMPs)</li>
-          <li>Waste Management & Pollution Control</li>
-          <li>Legal Compliance & Rehabilitation Plans</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Digital & Online Marketing</h3>
-        <ul>
-          <li>Website Analysis & Optimization</li>
-          <li>Content Writing & Social Media Marketing</li>
-          <li>Email Marketing & Multimedia</li>
-          <li>Website Creation</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>HR & Talent Management</h3>
-        <ul>
-          <li>Recruitment & Retention Strategies</li>
-          <li>Job Evaluation & Profiling</li>
-          <li>Career Development & Compliance</li>
-          <li>Performance Management & Incentives</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Agricultural Services</h3>
-        <ul>
-          <li>Land Evaluation & Irrigation Systems</li>
-          <li>Water Tank Welding & Shade Net Supply</li>
-          <li>Chemical & Agricultural Consultancy</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>General Services</h3>
-        <ul>
-          <li>Construction & Renovation</li>
-          <li>CCTV & Alarm Installation</li>
-          <li>Electrical, Plumbing & Welding</li>
-          <li>Cleaning & Transport</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>We're ready to help your business grow. Contact us for more information about our services.</p>
+                
+                <div class="contact-details">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+264818988127">+264 81 8988 127</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:Paulus.Namupala@protonmail.org">Paulus.Namupala@protonmail.org</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1066 Etwangoma Street, Windhoek, Namibia</p>
+                    <p><i class="fas fa-globe"></i> <a href="https://www.tinygiantgroup.na" target="_blank">www.tinygiantgroup.na</a></p>
+                </div>
+                
+                <div class="quote">
+                    <p>"Every problem is a gift - without problems we would not grow."</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact" style="text-align:center;">
-      <p>📞 +264 81 8988 127</p>
-      <p>✉️ Paulus.Namupala@protonmail.org</p>
-      <p>📍 1066 Etwangoma Street, Windhoek, Namibia</p>
-      <p>🌐 <a href="https://www.tinygiantgroup.na" target="_blank">www.tinygiantgroup.na</a></p>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="confidential-notice">
+                <p><strong>Confidential Notice:</strong> Information provided in this company profile is unique to this business and confidential. Anyone reading this agrees not to disclose any of the information without prior written permission of the company.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#team">Our Team</a>
+                <a href="#services">Our Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023-2024 Tiny Giant Group cc – Sheer Obsession! All rights reserved.</p>
+                <p>Fully Namibian-owned | Registered with Ministry of Trade and Industry</p>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Tiny Giant Group – Sheer Obsession! All rights reserved.</p>
-  </footer>
-
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        
+        // Sticky navigation background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.backgroundColor = 'rgba(0, 51, 102, 0.95)';
+            } else {
+                nav.style.backgroundColor = 'var(--primary-blue)';
+            }
+        });
+    </script>
 </body>
 </html>
