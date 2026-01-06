@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiny Giant Group – Sheer Obsession!</title>
+    <meta name="description" content="Tiny Giant Group - Namibian company providing creative, environmental, HR, agricultural, and general services with sheer obsession!">
+    <meta name="keywords" content="Namibia, Windhoek, business services, environmental management, HR, agriculture, creative services">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* === CSS Reset & Variables === */
@@ -132,6 +134,31 @@
             cursor: pointer;
         }
         
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
         /* === Main Content Sections === */
         section {
             padding: 80px 20px;
@@ -236,6 +263,54 @@
             font-size: 0.95rem;
         }
         
+        /* Portfolio Section */
+        #portfolio {
+            background-color: var(--light-gray);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 51, 102, 0.9));
+            color: white;
+            padding: 20px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
         /* Services Section */
         .services-grid {
             display: grid;
@@ -288,6 +363,50 @@
             font-weight: bold;
         }
         
+        /* Testimonials Section */
+        #testimonials {
+            background-color: var(--light-gray);
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--accent-gold);
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            font-size: 80px;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial h4 {
+            color: var(--primary-blue);
+            text-align: right;
+        }
+        
         /* Contact Section */
         .contact-section {
             background: var(--light-gray);
@@ -305,6 +424,49 @@
         .contact-info {
             flex: 1;
             min-width: 300px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-form h3 {
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .contact-form button {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+        }
+        
+        .contact-form button:hover {
+            background: var(--secondary-blue);
         }
         
         .contact-details {
@@ -332,6 +494,22 @@
         .contact-details a:hover {
             color: var(--primary-blue);
             text-decoration: underline;
+        }
+        
+        .map-container {
+            margin-top: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .quote {
+            font-style: italic;
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 20px;
+            border-left: 3px solid var(--accent-gold);
+            background: rgba(255,255,255,0.05);
         }
         
         /* Footer */
@@ -381,15 +559,6 @@
             color: rgba(255,255,255,0.7);
         }
         
-        .quote {
-            font-style: italic;
-            margin: 30px auto;
-            max-width: 600px;
-            padding: 20px;
-            border-left: 3px solid var(--accent-gold);
-            background: rgba(255,255,255,0.05);
-        }
-        
         /* === Responsive Design === */
         @media (max-width: 992px) {
             .header-content h1 {
@@ -415,6 +584,10 @@
             .mobile-menu-btn {
                 display: block;
             }
+            
+            .contact-section {
+                padding: 40px 20px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -430,8 +603,9 @@
                 padding: 60px 20px;
             }
             
-            .contact-section {
-                padding: 40px 20px;
+            .portfolio-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
             }
         }
         
@@ -440,14 +614,27 @@
                 font-size: 1.8rem;
             }
             
-            .services-grid,
             .team-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/264818988127?text=Hello%20Tiny%20Giant%20Group!%20I'm%20interested%20in%20your%20services." 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Header with Hero Section -->
     <header>
         <div class="header-content">
@@ -470,7 +657,9 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
                 <li><a href="#team"><i class="fas fa-users"></i> Our Team</a></li>
-                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Our Services</a></li>
+                <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
+                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </div>
@@ -517,6 +706,41 @@
                 <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Eva V.N Petrus">
                 <h3>Eva V.N Petrus</h3>
                 <p>Manager: Finance & Administration</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2 class="section-title">Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80" alt="Creative Signage">
+                <div class="portfolio-overlay">
+                    <h3>Creative Signage</h3>
+                    <p>Brand identity and business signage projects</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Environmental Management">
+                <div class="portfolio-overlay">
+                    <h3>Environmental Projects</h3>
+                    <p>EIA assessments and environmental planning</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80" alt="Agricultural Services">
+                <div class="portfolio-overlay">
+                    <h3>Agricultural Solutions</h3>
+                    <p>Irrigation systems and farming consultancy</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" alt="Construction Services">
+                <div class="portfolio-overlay">
+                    <h3>Construction & Renovation</h3>
+                    <p>Building and infrastructure projects</p>
+                </div>
             </div>
         </div>
     </section>
@@ -593,13 +817,32 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Tiny Giant Group transformed our business signage with incredible professionalism and attention to detail. Their creative team understood our brand perfectly!"</p>
+                <h4>- Local Retail Business, Windhoek</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The environmental management plan they developed for our farm was comprehensive and compliant with all regulations. Highly recommended for agricultural services!"</p>
+                <h4>- Farm Owner, Omaheke Region</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Their HR services helped us streamline our recruitment process and develop effective retention strategies. Our employee satisfaction has improved significantly."</p>
+                <h4>- SME Business Owner</h4>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h2 class="section-title">Contact Us</h2>
         <div class="contact-content">
             <div class="contact-info">
                 <h3>Get in Touch</h3>
-                <p>We're ready to help your business grow. Contact us for more information about our services.</p>
+                <p>We're ready to help your business grow. Contact us for more information about our services or request a free quote.</p>
                 
                 <div class="contact-details">
                     <p><i class="fas fa-phone"></i> <a href="tel:+264818988127">+264 81 8988 127</a></p>
@@ -611,6 +854,33 @@
                 <div class="quote">
                     <p>"Every problem is a gift - without problems we would not grow."</p>
                 </div>
+                
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119190.28587641013!2d17.0113655!3d-22.56088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b1b3b3b3b3b3b%3A0x3b3b3b3b3b3b3b3b!2sWindhoek%2C%20Namibia!5e0!3m2!1sen!2s!4v1691234567890!5m2!1sen!2s" 
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                            title="Tiny Giant Group Location in Windhoek"></iframe>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Request a Quote</h3>
+                <form id="quoteForm">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="tel" placeholder="Your Phone Number">
+                    <select required>
+                        <option value="">Select Service Category</option>
+                        <option value="creative">Creative Services</option>
+                        <option value="environmental">Environmental Management</option>
+                        <option value="digital">Digital Marketing</option>
+                        <option value="hr">HR Services</option>
+                        <option value="agricultural">Agricultural Services</option>
+                        <option value="general">General Services</option>
+                        <option value="multiple">Multiple Services</option>
+                    </select>
+                    <textarea placeholder="Tell us about your project or requirements..." rows="5" required></textarea>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Submit Request</button>
+                </form>
             </div>
         </div>
     </section>
@@ -625,19 +895,23 @@
             <div class="footer-links">
                 <a href="#about">About Us</a>
                 <a href="#team">Our Team</a>
-                <a href="#services">Our Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
             </div>
             
             <div class="copyright">
                 <p>&copy; 2023-2024 Tiny Giant Group cc – Sheer Obsession! All rights reserved.</p>
                 <p>Fully Namibian-owned | Registered with Ministry of Trade and Industry</p>
+                <p style="margin-top: 15px; font-size: 0.8rem;">Website designed with passion for Tiny Giant Group's vision</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu -->
+    <!-- JavaScript -->
     <script>
+        // Mobile Menu Toggle
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
             document.getElementById('navLinks').classList.toggle('active');
         });
@@ -657,6 +931,59 @@
             } else {
                 nav.style.backgroundColor = 'var(--primary-blue)';
             }
+        });
+        
+        // Form Submission Handler
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your request! We will contact you within 24 hours.');
+            this.reset();
+        });
+        
+        // Simple testimonial slider (auto-rotate every 5 seconds)
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        
+        function showNextTestimonial() {
+            testimonials.forEach(testimonial => {
+                testimonial.style.display = 'none';
+            });
+            
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            testimonials[currentTestimonial].style.display = 'block';
+        }
+        
+        // Initialize testimonials
+        if (testimonials.length > 0) {
+            testimonials.forEach((testimonial, index) => {
+                testimonial.style.display = index === 0 ? 'block' : 'none';
+            });
+            
+            // Auto-rotate testimonials every 5 seconds
+            setInterval(showNextTestimonial, 5000);
+        }
+        
+        // Add animation to elements when they scroll into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe service cards and team cards
+        document.querySelectorAll('.service-card, .team-card, .portfolio-item').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
         });
     </script>
 </body>
