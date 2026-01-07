@@ -1,349 +1,956 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Small Giant Investment cc – Sheer Obsession!</title>
-
-  <meta name="description" content="Small Giant Investment cc – Namibian-owned business providing creative, environmental, HR, agricultural and general services." />
-  <meta name="keywords" content="Small Giant Investment, Namibia, Windhoek, Creative Services, Environmental Management, HR, Agriculture" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <style>
-    :root {
-      --primary: #003366;
-      --secondary: #00509e;
-      --accent: #d4af37;
-      --light: #f8f9fa;
-      --dark: #333;
-      --transition: 0.3s ease;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: "Segoe UI", system-ui, sans-serif;
-      color: var(--dark);
-      background: #fff;
-      line-height: 1.6;
-    }
-
-    /* ================= HEADER ================= */
-    header {
-      background:
-        linear-gradient(rgba(0,51,102,.9), rgba(0,80,158,.9)),
-        url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80");
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-      text-align: center;
-      padding: 140px 20px 110px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .slogan {
-      font-size: 1.9rem;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .tagline {
-      font-size: 1.3rem;
-      max-width: 820px;
-      margin: 15px auto 25px;
-    }
-
-    .year-badge {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--primary);
-      padding: 8px 22px;
-      border-radius: 30px;
-      font-weight: 700;
-    }
-
-    /* ================= NAV ================= */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: var(--primary);
-      box-shadow: 0 4px 12px rgba(0,0,0,.1);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      color: #fff;
-      font-size: 1.6rem;
-      font-weight: 700;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .logo span { color: var(--accent); }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-    }
-
-    .nav-links a {
-      color: #fff;
-      padding: 20px 16px;
-      display: block;
-      font-weight: 500;
-      text-decoration: none;
-      transition: var(--transition);
-    }
-
-    .nav-links a:hover {
-      background: var(--secondary);
-      color: var(--accent);
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.6rem;
-      cursor: pointer;
-    }
-
-    /* ================= SECTIONS ================= */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      color: var(--primary);
-      margin-bottom: 50px;
-    }
-
-    /* ABOUT */
-    .about-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-    }
-
-    .about-text,
-    .mission-vision {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .about-text p {
-      margin-bottom: 16px;
-      text-align: justify;
-    }
-
-    .mission-vision {
-      background: var(--light);
-      padding: 30px;
-      border-left: 5px solid var(--accent);
-      border-radius: 8px;
-    }
-
-    /* TEAM */
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .team-card {
-      background: #fff;
-      text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 6px 16px rgba(0,0,0,.06);
-      transition: var(--transition);
-      border-top: 4px solid var(--primary);
-    }
-
-    .team-card:hover { transform: translateY(-8px); }
-
-    .team-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .team-card h3 {
-      margin: 18px 0 6px;
-      color: var(--primary);
-    }
-
-    .team-card p {
-      color: var(--secondary);
-      font-weight: 500;
-      margin-bottom: 18px;
-    }
-
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .service-card {
-      background: #fff;
-      padding: 28px;
-      border-left: 4px solid var(--accent);
-      border-radius: 8px;
-      box-shadow: 0 6px 16px rgba(0,0,0,.05);
-      transition: var(--transition);
-    }
-
-    .service-card:hover { transform: translateY(-6px); }
-
-    .service-card h3 {
-      display: flex;
-      gap: 10px;
-      color: var(--primary);
-      margin-bottom: 14px;
-    }
-
-    .service-card ul { list-style: none; }
-
-    .service-card li {
-      padding: 8px 0 8px 22px;
-      border-bottom: 1px dashed #eee;
-      position: relative;
-    }
-
-    .service-card li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--secondary);
-      font-weight: 700;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--primary);
-      color: #fff;
-      padding: 50px 20px 30px;
-      text-align: center;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    footer a:hover { color: var(--accent); }
-
-    .footer-links {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 25px 0;
-    }
-
-    /* ================= RESPONSIVE ================= */
-    @media (max-width: 900px) {
-      .nav-links {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: var(--primary);
-        flex-direction: column;
-        display: none;
-      }
-
-      .nav-links.active { display: flex; }
-
-      .mobile-menu-btn { display: block; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Giant Investment cc – Sheer Obsession!</title>
+    <meta name="description" content="Small Giant Investment cc - Namibian company providing creative, environmental, HR, agricultural, and general services with sheer obsession!">
+    <meta name="keywords" content="Namibia, Windhoek, business services, environmental management, HR, agriculture, creative services, investment">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* === BASIC CSS RESET === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* === HEADER === */
+        header {
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 80, 158, 0.9)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 140px 20px 100px;
+        }
+        
+        .header-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header-content .slogan {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .header-content .tagline {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+        }
+        
+        .year-badge {
+            display: inline-block;
+            background: #d4af37;
+            color: #003366;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* === NAVIGATION === */
+        nav {
+            background-color: #003366;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo span {
+            color: #d4af37;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            padding: 20px 18px;
+            display: block;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background-color: #00509e;
+            color: #d4af37;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* === SECTIONS === */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* SECTION TITLES - NO UNDERLINES */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #003366;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        
+        /* Justified text for About section */
+        .about-text p {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .mission-vision {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #d4af37;
+        }
+        
+        .mission-vision h3 {
+            color: #003366;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .mission-vision p {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .mission-vision p:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-top: 4px solid #003366;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .team-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .team-card h3 {
+            color: #003366;
+            margin: 20px 0 5px;
+        }
+        
+        .team-card p {
+            color: #00509e;
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        /* Portfolio Section */
+        #portfolio {
+            background-color: #f8f9fa;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 51, 102, 0.9));
+            color: white;
+            padding: 20px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid #d4af37;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: #003366;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .service-card h3 i {
+            color: #d4af37;
+        }
+        
+        .service-card ul {
+            list-style: none;
+        }
+        
+        .service-card li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .service-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00509e;
+            font-weight: bold;
+        }
+        
+        /* Testimonials Section */
+        #testimonials {
+            background-color: #f8f9fa;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid #d4af37;
+            position: relative;
+        }
+        
+        .testimonial p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial h4 {
+            color: #003366;
+            text-align: right;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 60px;
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-form h3 {
+            color: #003366;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .contact-form button {
+            background: #003366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background: #00509e;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .contact-details i {
+            color: #d4af37;
+            width: 20px;
+        }
+        
+        .contact-details a {
+            color: #00509e;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-details a:hover {
+            color: #003366;
+            text-decoration: underline;
+        }
+        
+        /* Simple Location Display - NO Google Maps iframe */
+        .location-display {
+            margin-top: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            background: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .location-display i {
+            font-size: 50px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        
+        .quote {
+            font-style: italic;
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 20px;
+            border-left: 3px solid #d4af37;
+            background: rgba(255,255,255,0.05);
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 50px 20px 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .passionate-notice {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 1rem;
+            font-style: italic;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 992px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-content .slogan {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #003366;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .contact-section {
+                padding: 40px 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2rem;
+            }
+            
+            .header-content .slogan {
+                font-size: 1.4rem;
+            }
+            
+            .header-content .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            .portfolio-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-content .slogan {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/264818988127?text=Hello%20Small%20Giant%20Investment!%20I'm%20interested%20in%20your%20services." 
+       class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<!-- WhatsApp -->
-<a href="https://wa.me/264818988127" class="whatsapp-float" aria-label="Chat on WhatsApp"></a>
+    <!-- Header with Hero Section -->
+    <header>
+        <div class="header-content">
+            <h1>Small Giant Investment cc</h1>
+            <div class="slogan">Sheer Obsession!</div>
+            <p class="tagline">Creating new businesses and helping existing businesses expand</p>
+            <div class="year-badge">Established 2023</div>
+        </div>
+    </header>
 
-<header>
-  <h1>Small Giant Investment cc</h1>
-  <div class="slogan">Sheer Obsession!</div>
-  <p class="tagline">Creating new businesses and helping existing businesses expand</p>
-  <div class="year-badge">Established 2023</div>
-</header>
+    <!-- Sticky Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-mountain"></i>
+                <span>Small</span>Giant
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#team"><i class="fas fa-users"></i> Our Team</a></li>
+                <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
+                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav>
-  <div class="nav-container">
-    <div class="logo"><i class="fas fa-mountain"></i><span>Small</span>Giant</div>
-    <button class="mobile-menu-btn" id="menuBtn"><i class="fas fa-bars"></i></button>
-    <ul class="nav-links" id="nav">
-      <li><a href="#about">About</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>Small Giant Investment cc</strong> is a fully Namibian-owned company that was established in 2023 and registered in July 2023 with the Ministry of Trade and Industry and other relevant business bodies.</p>
+                <p>We operate to various specifications and employ dedicated and qualified staff. The group provides services to different clients depending on their needs.</p>
+                <p>Our team is equipped with Industry 4.0 Employability Skills such as Analytical Thinking and Innovation; Reasoning, Problem-solving and Ideation; Complex Problem-solving; Critical Thinking and Analysis; Creativity, Originality and Initiative; Leadership and Social Influence; Technology use, Persuasion and Negotiation.</p>
+            </div>
+            <div class="mission-vision">
+                <h3><i class="fas fa-bullseye"></i> Our Mission & Vision</h3>
+                <p><strong>Mission:</strong> To create new businesses and help existing businesses expand.</p>
+                <p><strong>Vision:</strong> A vibrant rural economy driven by new and growing businesses.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="about">
-  <h2 class="section-title">About Us</h2>
-  <div class="about-content">
-    <div class="about-text">
-      <p><strong>Small Giant Investment cc</strong> is a fully Namibian-owned company established in 2023.</p>
-      <p>We help businesses grow through creative, technical and strategic services.</p>
-    </div>
-    <div class="mission-vision">
-      <p><strong>Mission:</strong> Create and grow businesses.</p>
-      <p><strong>Vision:</strong> A vibrant rural economy.</p>
-    </div>
-  </div>
-</section>
+    <!-- Team Section -->
+    <section id="team">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Paulus Namupala">
+                <h3>Paulus Namupala</h3>
+                <p>Managing Director / CEO</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80" alt="David Williamson">
+                <h3>David Williamson</h3>
+                <p>Director: Operations</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80" alt="Panduleni Hans">
+                <h3>Panduleni Hans</h3>
+                <p>Director: Technical Services</p>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Eva V.N Petrus">
+                <h3>Eva V.N Petrus</h3>
+                <p>Manager: Finance & Administration</p>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#team">Team</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <p>&copy; 2023–2024 Small Giant Investment cc</p>
-</footer>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2 class="section-title">Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=600&q=80" alt="Creative Signage">
+                <div class="portfolio-overlay">
+                    <h3>Creative Signage</h3>
+                    <p>Brand identity and business signage projects</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" alt="Environmental Management">
+                <div class="portfolio-overlay">
+                    <h3>Environmental Projects</h3>
+                    <p>EIA assessments and environmental planning</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80" alt="Agricultural Services">
+                <div class="portfolio-overlay">
+                    <h3>Agricultural Solutions</h3>
+                    <p>Irrigation systems and farming consultancy</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80" alt="Construction Services">
+                <div class="portfolio-overlay">
+                    <h3>Construction & Renovation</h3>
+                    <p>Building and infrastructure projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-  const btn = document.getElementById("menuBtn");
-  const nav = document.getElementById("nav");
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3><i class="fas fa-paint-brush"></i> Creative Services</h3>
+                <ul>
+                    <li>Brand Audits</li>
+                    <li>Fleet Graphics & Sign Writing</li>
+                    <li>COVID & Safety Signage</li>
+                    <li>Poster Signage & Floor Graphics</li>
+                    <li>PPE Products & Face Shields</li>
+                    <li>Perspex Dividers & Sneeze Guards</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-leaf"></i> Environmental Management</h3>
+                <ul>
+                    <li>Environmental Impact Assessments (EIAs)</li>
+                    <li>Environmental Management Plans (EMPs)</li>
+                    <li>Waste Management & Pollution Control</li>
+                    <li>Environmental Monitoring</li>
+                    <li>Legal Compliance Evaluation</li>
+                    <li>Rehabilitation Plans</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-laptop-code"></i> Digital Marketing</h3>
+                <ul>
+                    <li>Content Writing</li>
+                    <li>Website Analysis & Optimization</li>
+                    <li>Social Media Marketing</li>
+                    <li>Email Marketing & Multimedia</li>
+                    <li>Website Creation</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-users-cog"></i> HR Services</h3>
+                <ul>
+                    <li>Attraction & Retention Strategies</li>
+                    <li>Job Evaluation & Profiling</li>
+                    <li>Career Development & Talent Management</li>
+                    <li>Performance Management</li>
+                    <li>Remuneration Strategy & Policy</li>
+                    <li>Compliance with Legislation</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-tractor"></i> Agricultural Services</h3>
+                <ul>
+                    <li>Land Evaluation</li>
+                    <li>Irrigation System Installations</li>
+                    <li>Water Tank Stands/Tower Welding</li>
+                    <li>Agricultural Shade Net Supply</li>
+                    <li>Chemical Insecticide/Herbicide</li>
+                    <li>Agricultural Consultancy</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-tools"></i> General Services</h3>
+                <ul>
+                    <li>Transportation & Renovation</li>
+                    <li>De-bushing & Welding</li>
+                    <li>Plumbing & Road Construction</li>
+                    <li>CCTV & Alarm Installation</li>
+                    <li>Electrical Fencing</li>
+                    <li>Cleaning Services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  if (btn && nav) {
-    btn.addEventListener("click", () => nav.classList.toggle("active"));
-  }
-</script>
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial">
+                <p>"Small Giant Investment transformed our business signage with incredible professionalism and attention to detail. Their creative team understood our brand perfectly!"</p>
+                <h4>- Local Retail Business, Windhoek</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The environmental management plan they developed for our farm was comprehensive and compliant with all regulations. Highly recommended for agricultural services!"</p>
+                <h4>- Farm Owner, Omaheke Region</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Their HR services helped us streamline our recruitment process and develop effective retention strategies. Our employee satisfaction has improved significantly."</p>
+                <h4>- SME Business Owner</h4>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>We're ready to help your business grow. Contact us for more information about our services or request a free quote.</p>
+                
+                <div class="contact-details">
+                    <p><i class="fas fa-phone"></i> <a href="tel:+264818988127">+264 81 8988 127</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:Paulus.Namupala@protonmail.org">Paulus.Namupala@protonmail.org</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1066 Etwangoma Street, Windhoek, Namibia</p>
+                    <p><i class="fas fa-globe"></i> <a href="https://www.tinygiantgroup.na" target="_blank">www.tinygiantgroup.na</a></p>
+                </div>
+                
+                <div class="quote">
+                    <p>"Every problem is a gift - without problems we would not grow."</p>
+                </div>
+                
+                <!-- Simple Location Display - NO Google Maps -->
+                <div class="location-display">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Our Location</h3>
+                    <p style="font-size: 1.1rem; margin: 10px 0;">1066 Etwangoma Street</p>
+                    <p style="font-size: 1.1rem; margin: 10px 0;">Windhoek, Namibia</p>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                        <i class="fas fa-info-circle"></i> Detailed directions available on request
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Request a Quote</h3>
+                <form id="quoteForm">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="tel" placeholder="Your Phone Number">
+                    <select required>
+                        <option value="">Select Service Category</option>
+                        <option value="creative">Creative Services</option>
+                        <option value="environmental">Environmental Management</option>
+                        <option value="digital">Digital Marketing</option>
+                        <option value="hr">HR Services</option>
+                        <option value="agricultural">Agricultural Services</option>
+                        <option value="general">General Services</option>
+                        <option value="multiple">Multiple Services</option>
+                    </select>
+                    <textarea placeholder="Tell us about your project or requirements..." rows="5" required></textarea>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="passionate-notice">
+                <p>We are passionate about service delivery to existing and new businesses, and we understand that customer service is the backbone of any business.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#team">Our Team</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023-2024 Small Giant Investment cc – Sheer Obsession! All rights reserved.</p>
+                <p>Fully Namibian-owned | Registered with Ministry of Trade and Industry</p>
+                <p style="margin-top: 15px; font-size: 0.8rem;">Website designed with passion for Small Giant Investment's vision</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+        
+        // Form Submission Handler
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your request! We will contact you within 24 hours.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
