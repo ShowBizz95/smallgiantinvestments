@@ -451,22 +451,13 @@
             text-decoration: underline;
         }
         
-        /* Simple Location Display - NO Google Maps iframe */
-        .location-display {
+        /* Google Maps - Original working iframe */
+        .map-container {
             margin-top: 40px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border: 1px solid #ddd;
-            background: white;
-            padding: 30px;
-            text-align: center;
-        }
-        
-        .location-display i {
-            font-size: 50px;
-            color: #d4af37;
-            margin-bottom: 20px;
         }
         
         .quote {
@@ -872,15 +863,18 @@
                     <p>"Every problem is a gift - without problems we would not grow."</p>
                 </div>
                 
-                <!-- Simple Location Display - NO Google Maps -->
-                <div class="location-display">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Our Location</h3>
-                    <p style="font-size: 1.1rem; margin: 10px 0;">1066 Etwangoma Street</p>
-                    <p style="font-size: 1.1rem; margin: 10px 0;">Windhoek, Namibia</p>
-                    <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
-                        <i class="fas fa-info-circle"></i> Detailed directions available on request
-                    </p>
+                <!-- Original Google Maps iframe from initial working code -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119190.28587641013!2d17.0113655!3d-22.56088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b1b3b3b3b3b3b%3A0x3b3b3b3b3b3b3b3b!2sWindhoek%2C%20Namibia!5e0!3m2!1sen!2s!4v1691234567890!5m2!1sen!2s" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Small Giant Investment Location in Windhoek">
+                    </iframe>
                 </div>
             </div>
             
