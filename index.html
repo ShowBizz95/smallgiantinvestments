@@ -177,19 +177,6 @@
             text-align: center;
             margin-bottom: 50px;
             color: var(--primary-blue);
-            font-size: 2.5rem;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 0;
-        }
-        
-        /* Remove ALL underlines - this is the key fix */
-        .section-title::after,
-        .section-title::before,
-        .section-title:after,
-        .section-title:before {
-            display: none !important;
-            content: none !important;
         }
         
         /* Justified text for About section */
@@ -223,7 +210,6 @@
         .mission-vision h3 {
             color: var(--primary-blue);
             margin-bottom: 20px;
-            font-size: 1.5rem;
         }
         
         .mission-vision p {
@@ -353,7 +339,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.3rem;
         }
         
         .service-card h3 i {
@@ -397,6 +382,17 @@
             margin-bottom: 30px;
             border-left: 5px solid var(--accent-gold);
             position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            font-size: 80px;
+            color: var(--accent-gold);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: Georgia, serif;
         }
         
         .testimonial p {
@@ -444,7 +440,6 @@
             color: var(--primary-blue);
             margin-bottom: 25px;
             text-align: center;
-            font-size: 1.5rem;
         }
         
         .contact-form input,
@@ -507,7 +502,6 @@
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border: 1px solid #ddd;
         }
         
         .quote {
@@ -577,10 +571,6 @@
                 font-size: 1.6rem;
             }
             
-            .section-title {
-                font-size: 2rem;
-            }
-            
             .nav-links {
                 position: fixed;
                 top: 70px;
@@ -619,10 +609,6 @@
                 font-size: 1.1rem;
             }
             
-            .section-title {
-                font-size: 1.8rem;
-            }
-            
             section {
                 padding: 60px 20px;
             }
@@ -640,10 +626,6 @@
             
             .header-content .slogan {
                 font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 1.6rem;
             }
             
             .team-grid {
@@ -887,17 +869,10 @@
                     <p>"Every problem is a gift - without problems we would not grow."</p>
                 </div>
                 
-                <!-- Fixed Map - Simple static image instead of Google Maps iframe -->
                 <div class="map-container">
-                    <div style="background-color: #f5f5f5; padding: 20px; text-align: center; height: 300px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                        <i class="fas fa-map-marker-alt" style="font-size: 50px; color: var(--accent-gold); margin-bottom: 20px;"></i>
-                        <h3 style="color: var(--primary-blue); margin-bottom: 10px;">Our Location</h3>
-                        <p style="font-size: 1.1rem; color: var(--dark-gray);">1066 Etwangoma Street</p>
-                        <p style="font-size: 1.1rem; color: var(--dark-gray);">Windhoek, Namibia</p>
-                        <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
-                            <i class="fas fa-info-circle"></i> Map view available on request
-                        </p>
-                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119190.28587641013!2d17.0113655!3d-22.56088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b1b3b3b3b3b3b%3A0x3b3b3b3b3b3b3b3b!2sWindhoek%2C%20Namibia!5e0!3m2!1sen!2s!4v1691234567890!5m2!1sen!2s" 
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                            title="Small Giant Investment Location in Windhoek"></iframe>
                 </div>
             </div>
             
