@@ -85,22 +85,32 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
+            height: 80px; /* Slightly taller nav bar */
         }
         
-        /* Updated Logo Styling */
+        /* Updated Logo Styling - OPTION 1: White background with padding */
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: white;
             display: flex;
             align-items: center;
-            gap: 10px;
         }
         
         .logo img.logo-image {
-            height: 40px;
+            height: 60px; /* Increased from 40px to 60px (50% larger) */
             width: auto;
             object-fit: contain;
+            background-color: white; /* White background for contrast */
+            padding: 8px; /* Padding around the logo */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            border: 2px solid rgba(255, 255, 255, 0.3); /* Light border */
+            transition: all 0.3s ease; /* Smooth transition for hover */
+        }
+        
+        /* Logo hover effect */
+        .logo img.logo-image:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-color: #d4af37; /* Gold border on hover */
         }
         
         /* Hide the old logo elements */
@@ -592,7 +602,7 @@
             
             .nav-links {
                 position: fixed;
-                top: 70px;
+                top: 80px; /* Adjusted for taller nav */
                 left: 0;
                 width: 100%;
                 background-color: #003366;
@@ -640,6 +650,11 @@
             .services-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .logo img.logo-image {
+                height: 50px; /* Slightly smaller on mobile */
+                padding: 6px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -653,6 +668,11 @@
             
             .section-title {
                 font-size: 1.6rem;
+            }
+            
+            .logo img.logo-image {
+                height: 45px; /* Even smaller on very small screens */
+                padding: 5px;
             }
             
             .whatsapp-float {
