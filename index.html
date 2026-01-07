@@ -338,6 +338,8 @@
         .testimonial-slider {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            min-height: 250px;
         }
         
         .testimonial {
@@ -347,6 +349,19 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             margin-bottom: 30px;
             border-left: 5px solid #d4af37;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .testimonial.active {
+            opacity: 1;
+            transform: translateY(0);
             position: relative;
         }
         
@@ -829,7 +844,7 @@
     <section id="testimonials">
         <h2 class="section-title">What Our Clients Say</h2>
         <div class="testimonial-slider">
-            <div class="testimonial">
+            <div class="testimonial active">
                 <p>"Small Giant Investment transformed our business signage with incredible professionalism and attention to detail. Their creative team understood our brand perfectly!"</p>
                 <h4>- Local Retail Business, Windhoek</h4>
             </div>
@@ -945,6 +960,67 @@
             alert('Thank you for your request! We will contact you within 24 hours.');
             this.reset();
         });
+        
+        // Testimonial Slider - Auto-change every 5 seconds
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        const totalTestimonials = testimonials.length;
+        
+        function showNextTestimonial() {
+            // Remove active class from current testimonial
+            testimonials[currentTestimonial].classList.remove('active');
+            
+            // Move to next testimonial
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            
+            // Add active class to new testimonial
+            testimonials[currentTestimonial].classList.add('active');
+        }
+        
+        // Start testimonial rotation if there are testimonials
+        if (totalTestimonials > 0) {
+            // Set interval to change testimonials every 5 seconds (5000 milliseconds)
+            setInterval(showNextTestimonial, 5000);
+            
+            // Optional: Add manual navigation dots (uncomment if wanted)
+            /*
+            const dotsContainer = document.createElement('div');
+            dotsContainer.className = 'testimonial-dots';
+            dotsContainer.style.textAlign = 'center';
+            dotsContainer.style.marginTop = '20px';
+            
+            for (let i = 0; i < totalTestimonials; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'testimonial-dot';
+                dot.style.display = 'inline-block';
+                dot.style.width = '12px';
+                dot.style.height = '12px';
+                dot.style.borderRadius = '50%';
+                dot.style.backgroundColor = i === 0 ? '#d4af37' : '#ccc';
+                dot.style.margin = '0 5px';
+                dot.style.cursor = 'pointer';
+                dot.style.transition = 'background-color 0.3s';
+                
+                dot.addEventListener('click', () => {
+                    testimonials[currentTestimonial].classList.remove('active');
+                    currentTestimonial = i;
+                    testimonials[currentTestimonial].classList.add('active');
+                    updateDots();
+                });
+                
+                dotsContainer.appendChild(dot);
+            }
+            
+            document.querySelector('.testimonial-slider').appendChild(dotsContainer);
+            
+            function updateDots() {
+                const dots = document.querySelectorAll('.testimonial-dot');
+                dots.forEach((dot, index) => {
+                    dot.style.backgroundColor = index === currentTestimonial ? '#d4af37' : '#ccc';
+                });
+            }
+            */
+        }
     </script>
 </body>
 </html>
