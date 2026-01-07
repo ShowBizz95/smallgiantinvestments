@@ -189,11 +189,13 @@
             border-bottom: none;
         }
         
-        /* Team Section */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
+        /* Team Section - Centered single member */
+        .team-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .team-card {
@@ -204,17 +206,8 @@
             transition: all 0.3s ease;
             text-align: center;
             border-top: 4px solid #003366;
-            position: relative;
-        }
-        
-        .team-card.vacant {
-            border-top: 4px solid #999;
-            opacity: 0.7;
-        }
-        
-        .team-card.vacant:hover {
-            transform: translateY(0);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 300px;
         }
         
         .team-card:hover {
@@ -224,47 +217,21 @@
         
         .team-card img {
             width: 100%;
-            height: 200px;
+            height: 250px;
             object-fit: cover;
-        }
-        
-        .team-card.vacant img {
-            filter: grayscale(100%);
-            opacity: 0.5;
         }
         
         .team-card h3 {
             color: #003366;
             margin: 20px 0 5px;
-        }
-        
-        .team-card.vacant h3 {
-            color: #999;
+            font-size: 1.4rem;
         }
         
         .team-card p {
             color: #00509e;
             font-weight: 500;
             margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-        
-        .team-card.vacant p {
-            color: #777;
-        }
-        
-        .vacant-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(153, 153, 153, 0.9);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1rem;
         }
         
         /* Portfolio Section */
@@ -675,10 +642,6 @@
                 font-size: 1.6rem;
             }
             
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .whatsapp-float {
                 bottom: 20px;
                 right: 20px;
@@ -744,39 +707,14 @@
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Team Section - Only Paulus Namupala -->
     <section id="team">
         <h2 class="section-title">Our Team</h2>
-        <div class="team-grid">
-            <!-- Paulus Namupala - Active Team Member -->
+        <div class="team-container">
             <div class="team-card">
                 <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Paulus Namupala">
                 <h3>Paulus Namupala</h3>
                 <p>Managing Director / CEO</p>
-            </div>
-            
-            <!-- Vacant Position 1 -->
-            <div class="team-card vacant">
-                <div class="vacant-badge">Vacant</div>
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Vacant Position">
-                <h3>Position Available</h3>
-                <p>Director: Operations</p>
-            </div>
-            
-            <!-- Vacant Position 2 -->
-            <div class="team-card vacant">
-                <div class="vacant-badge">Vacant</div>
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" alt="Vacant Position">
-                <h3>Position Available</h3>
-                <p>Director: Technical Services</p>
-            </div>
-            
-            <!-- Vacant Position 3 -->
-            <div class="team-card vacant">
-                <div class="vacant-badge">Vacant</div>
-                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=500&q=80" alt="Vacant Position">
-                <h3>Position Available</h3>
-                <p>Manager: Finance & Administration</p>
             </div>
         </div>
     </section>
