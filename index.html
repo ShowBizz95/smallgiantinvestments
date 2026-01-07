@@ -204,6 +204,17 @@
             transition: all 0.3s ease;
             text-align: center;
             border-top: 4px solid #003366;
+            position: relative;
+        }
+        
+        .team-card.vacant {
+            border-top: 4px solid #999;
+            opacity: 0.7;
+        }
+        
+        .team-card.vacant:hover {
+            transform: translateY(0);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .team-card:hover {
@@ -217,9 +228,18 @@
             object-fit: cover;
         }
         
+        .team-card.vacant img {
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+        
         .team-card h3 {
             color: #003366;
             margin: 20px 0 5px;
+        }
+        
+        .team-card.vacant h3 {
+            color: #999;
         }
         
         .team-card p {
@@ -227,6 +247,24 @@
             font-weight: 500;
             margin-bottom: 20px;
             font-size: 0.95rem;
+        }
+        
+        .team-card.vacant p {
+            color: #777;
+        }
+        
+        .vacant-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(153, 153, 153, 0.9);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         /* Portfolio Section */
@@ -710,24 +748,34 @@
     <section id="team">
         <h2 class="section-title">Our Team</h2>
         <div class="team-grid">
+            <!-- Paulus Namupala - Active Team Member -->
             <div class="team-card">
                 <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80" alt="Paulus Namupala">
                 <h3>Paulus Namupala</h3>
                 <p>Managing Director / CEO</p>
             </div>
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=500&q=80" alt="David Williamson">
-                <h3>David Williamson</h3>
+            
+            <!-- Vacant Position 1 -->
+            <div class="team-card vacant">
+                <div class="vacant-badge">Vacant</div>
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Vacant Position">
+                <h3>Position Available</h3>
                 <p>Director: Operations</p>
             </div>
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=500&q=80" alt="Panduleni Hans">
-                <h3>Panduleni Hans</h3>
+            
+            <!-- Vacant Position 2 -->
+            <div class="team-card vacant">
+                <div class="vacant-badge">Vacant</div>
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" alt="Vacant Position">
+                <h3>Position Available</h3>
                 <p>Director: Technical Services</p>
             </div>
-            <div class="team-card">
-                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Eva V.N Petrus">
-                <h3>Eva V.N Petrus</h3>
+            
+            <!-- Vacant Position 3 -->
+            <div class="team-card vacant">
+                <div class="vacant-badge">Vacant</div>
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=500&q=80" alt="Vacant Position">
+                <h3>Position Available</h3>
                 <p>Manager: Finance & Administration</p>
             </div>
         </div>
@@ -869,9 +917,9 @@
                 
                 <div class="contact-details">
                     <p><i class="fas fa-phone"></i> <a href="tel:+264818988127">+264 81 8988 127</a></p>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:namupalapaulus@gmail.com">namupalapaulus@gmail.com</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:Paulus.Namupala@protonmail.org">Paulus.Namupala@protonmail.org</a></p>
                     <p><i class="fas fa-map-marker-alt"></i> 1066 Etwangoma Street, Windhoek, Namibia</p>
-                    <p><i class="fas fa-globe"></i> <a href="https://www.smallgiantinvestments.netlify.app" target="_blank">www.smallgiantinvestments.netlify.app</a></p>
+                    <p><i class="fas fa-globe"></i> <a href="https://www.tinygiantgroup.na" target="_blank">www.tinygiantgroup.na</a></p>
                 </div>
                 
                 <div class="quote">
@@ -933,7 +981,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023-2026 Small Giant Investment cc – Sheer Obsession! All rights reserved.</p>
+                <p>&copy; 2023-2024 Small Giant Investment cc – Sheer Obsession! All rights reserved.</p>
                 <p>Fully Namibian-owned | Registered with Ministry of Trade and Industry</p>
                 <p style="margin-top: 15px; font-size: 0.8rem;">Website designed with passion for Small Giant Investment's vision</p>
             </div>
@@ -981,45 +1029,6 @@
         if (totalTestimonials > 0) {
             // Set interval to change testimonials every 5 seconds (5000 milliseconds)
             setInterval(showNextTestimonial, 5000);
-            
-            // Optional: Add manual navigation dots (uncomment if wanted)
-            /*
-            const dotsContainer = document.createElement('div');
-            dotsContainer.className = 'testimonial-dots';
-            dotsContainer.style.textAlign = 'center';
-            dotsContainer.style.marginTop = '20px';
-            
-            for (let i = 0; i < totalTestimonials; i++) {
-                const dot = document.createElement('span');
-                dot.className = 'testimonial-dot';
-                dot.style.display = 'inline-block';
-                dot.style.width = '12px';
-                dot.style.height = '12px';
-                dot.style.borderRadius = '50%';
-                dot.style.backgroundColor = i === 0 ? '#d4af37' : '#ccc';
-                dot.style.margin = '0 5px';
-                dot.style.cursor = 'pointer';
-                dot.style.transition = 'background-color 0.3s';
-                
-                dot.addEventListener('click', () => {
-                    testimonials[currentTestimonial].classList.remove('active');
-                    currentTestimonial = i;
-                    testimonials[currentTestimonial].classList.add('active');
-                    updateDots();
-                });
-                
-                dotsContainer.appendChild(dot);
-            }
-            
-            document.querySelector('.testimonial-slider').appendChild(dotsContainer);
-            
-            function updateDots() {
-                const dots = document.querySelectorAll('.testimonial-dot');
-                dots.forEach((dot, index) => {
-                    dot.style.backgroundColor = index === currentTestimonial ? '#d4af37' : '#ccc';
-                });
-            }
-            */
         }
     </script>
 </body>
