@@ -34,16 +34,61 @@
             scroll-behavior: smooth;
         }
         
-        /* === HEADER === */
+        /* === HEADER WITH SLIDESHOW === */
         header {
-            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 80, 158, 0.7)), 
-                        url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main.jpg');
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+        }
+        
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: white;
-            text-align: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        /* Overlay on slides */
+        .slide::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 80, 158, 0.7));
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
             padding: 140px 20px 100px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         
         .header-content h1 {
@@ -75,6 +120,68 @@
             font-weight: bold;
             margin-top: 15px;
             font-size: 1.1rem;
+        }
+        
+        /* Slideshow navigation dots */
+        .slideshow-dots {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            z-index: 3;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background-color: #d4af37;
+            transform: scale(1.2);
+        }
+        
+        .dot:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Slideshow navigation arrows */
+        .slideshow-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+        
+        .slideshow-nav button {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slideshow-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+            transform: scale(1.1);
         }
         
         /* === NAVIGATION === */
@@ -681,6 +788,20 @@
             .team-card {
                 min-width: 250px;
             }
+            
+            header {
+                height: 500px;
+            }
+            
+            .header-content {
+                padding: 100px 20px 80px;
+            }
+            
+            .slideshow-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
         }
         
         @media (max-width: 768px) {
@@ -722,6 +843,18 @@
                 min-width: 100%;
                 max-width: 350px;
             }
+            
+            header {
+                height: 450px;
+            }
+            
+            .header-content {
+                padding: 80px 20px 60px;
+            }
+            
+            .slideshow-nav {
+                display: none; /* Hide arrows on mobile for cleaner look */
+            }
         }
         
         @media (max-width: 480px) {
@@ -761,6 +894,14 @@
             .team-card {
                 max-width: 300px;
             }
+            
+            header {
+                height: 400px;
+            }
+            
+            .header-content {
+                padding: 60px 20px 40px;
+            }
         }
     </style>
 </head>
@@ -771,8 +912,38 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Header with Hero Section -->
+    <!-- Header with Slideshow -->
     <header>
+        <div class="slideshow-container" id="slideshow">
+            <!-- Original image -->
+            <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main.jpg');"></div>
+            <!-- New images 1-8 -->
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main1.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main2.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main3.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main4.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main5.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main6.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main7.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main8.jpg');"></div>
+        </div>
+        
+        <!-- Slideshow Navigation Arrows -->
+        <div class="slideshow-nav">
+            <button id="prevSlide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextSlide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Slideshow Dots -->
+        <div class="slideshow-dots" id="slideDots">
+            <!-- Dots will be generated by JavaScript -->
+        </div>
+        
+        <!-- Header Content -->
         <div class="header-content">
             <h1>Small Giant Group</h1>
             <div class="slogan">Sheer Obsession!</div>
@@ -1109,6 +1280,88 @@
             // Set interval to change testimonials every 5 seconds (5000 milliseconds)
             setInterval(showNextTestimonial, 5000);
         }
+        
+        // ====== HEADER SLIDESHOW FUNCTIONALITY ======
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let slideshowInterval;
+        
+        // Create dots for slideshow
+        function createDots() {
+            const dotsContainer = document.getElementById('slideDots');
+            
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'dot';
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('data-slide', i);
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+        
+        // Go to specific slide
+        function goToSlide(slideIndex) {
+            // Remove active class from current slide and dot
+            slides[currentSlide].classList.remove('active');
+            document.querySelectorAll('.dot')[currentSlide].classList.remove('active');
+            
+            // Update current slide
+            currentSlide = slideIndex;
+            
+            // Add active class to new slide and dot
+            slides[currentSlide].classList.add('active');
+            document.querySelectorAll('.dot')[currentSlide].classList.add('active');
+            
+            // Reset interval
+            resetSlideshowInterval();
+        }
+        
+        // Next slide
+        function nextSlide() {
+            let next = currentSlide + 1;
+            if (next >= totalSlides) next = 0;
+            goToSlide(next);
+        }
+        
+        // Previous slide
+        function prevSlide() {
+            let prev = currentSlide - 1;
+            if (prev < 0) prev = totalSlides - 1;
+            goToSlide(prev);
+        }
+        
+        // Reset slideshow interval
+        function resetSlideshowInterval() {
+            clearInterval(slideshowInterval);
+            slideshowInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        }
+        
+        // Initialize slideshow
+        function initSlideshow() {
+            createDots();
+            
+            // Add event listeners to navigation buttons
+            document.getElementById('prevSlide').addEventListener('click', prevSlide);
+            document.getElementById('nextSlide').addEventListener('click', nextSlide);
+            
+            // Pause slideshow on hover
+            const slideshowContainer = document.getElementById('slideshow');
+            slideshowContainer.addEventListener('mouseenter', () => {
+                clearInterval(slideshowInterval);
+            });
+            
+            slideshowContainer.addEventListener('mouseleave', () => {
+                resetSlideshowInterval();
+            });
+            
+            // Start slideshow
+            resetSlideshowInterval();
+        }
+        
+        // Initialize slideshow when page loads
+        document.addEventListener('DOMContentLoaded', initSlideshow);
     </script>
 </body>
 </html>
