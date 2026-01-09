@@ -237,12 +237,13 @@
             border-bottom: none;
         }
         
-        /* Team Section - Centered single member */
+        /* Team Section - Three members */
         .team-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            max-width: 800px;
+            gap: 30px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
@@ -256,6 +257,8 @@
             border-top: 4px solid #003366;
             width: 100%;
             max-width: 300px;
+            flex: 1;
+            min-width: 280px;
         }
         
         .team-card:hover {
@@ -280,6 +283,18 @@
             font-weight: 500;
             margin-bottom: 20px;
             font-size: 1rem;
+        }
+        
+        /* For the vacant positions, add a subtle visual cue */
+        .team-card:nth-child(2) h3,
+        .team-card:nth-child(3) h3 {
+            color: #666;
+        }
+        
+        .team-card:nth-child(2) p,
+        .team-card:nth-child(3) p {
+            color: #888;
+            font-style: italic;
         }
         
         /* Portfolio Section */
@@ -658,6 +673,14 @@
             .contact-section {
                 padding: 40px 20px;
             }
+            
+            .team-container {
+                gap: 20px;
+            }
+            
+            .team-card {
+                min-width: 250px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -694,6 +717,11 @@
             .nav-container {
                 height: 65px; /* Slightly shorter on mobile */
             }
+            
+            .team-card {
+                min-width: 100%;
+                max-width: 350px;
+            }
         }
         
         @media (max-width: 480px) {
@@ -728,6 +756,10 @@
                 width: 50px;
                 height: 50px;
                 font-size: 25px;
+            }
+            
+            .team-card {
+                max-width: 300px;
             }
         }
     </style>
@@ -788,14 +820,29 @@
         </div>
     </section>
 
-    <!-- Team Section - Only Paulus Namupala -->
+    <!-- Team Section - Three Positions -->
     <section id="team">
         <h2 class="section-title">Our Team</h2>
         <div class="team-container">
+            <!-- CEO/Managing Director -->
             <div class="team-card">
                 <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image1_ceo.jpg" alt="Paulus Namupala">
                 <h3>Paulus Namupala</h3>
                 <p>Managing Director / CEO</p>
+            </div>
+            
+            <!-- Technical Services Position -->
+            <div class="team-card">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image1_ceo.jpg" alt="Technical Services">
+                <h3>Position Available</h3>
+                <p>Technical Services Manager</p>
+            </div>
+            
+            <!-- Administration Services Position -->
+            <div class="team-card">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image1_ceo.jpg" alt="Administration Services">
+                <h3>Position Available</h3>
+                <p>Administration Services Manager</p>
             </div>
         </div>
     </section>
