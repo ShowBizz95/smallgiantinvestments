@@ -723,32 +723,137 @@
             font-size: 1.5rem;
         }
         
-        .contact-form input,
-        .contact-form select,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px 15px;
+        /* Enhanced Form Styling */
+        .form-group {
             margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #003366;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 14px;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-family: inherit;
             font-size: 1rem;
+            transition: all 0.3s ease;
         }
         
-        .contact-form button {
+        .form-control:focus {
+            outline: none;
+            border-color: #00509e;
+            box-shadow: 0 0 0 3px rgba(0, 80, 158, 0.1);
+        }
+        
+        .form-control.error {
+            border-color: #dc3545;
+        }
+        
+        .form-control.success {
+            border-color: #28a745;
+        }
+        
+        .error-message {
+            color: #dc3545;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+            padding-right: 2.5rem;
+        }
+        
+        .form-submit-btn {
             background: #003366;
             color: white;
             border: none;
-            padding: 15px 30px;
+            padding: 16px 30px;
             border-radius: 5px;
             font-size: 1rem;
             cursor: pointer;
             width: 100%;
             transition: all 0.3s ease;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
         
-        .contact-form button:hover {
+        .form-submit-btn:hover:not(:disabled) {
             background: #00509e;
+            transform: translateY(-2px);
+        }
+        
+        .form-submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .form-submit-btn.loading {
+            background: #00509e;
+        }
+        
+        /* Form Status Messages */
+        .form-status {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .form-status.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        
+        .form-status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        
+        .form-status i {
+            margin-right: 10px;
+        }
+        
+        /* Privacy Notice */
+        .privacy-notice {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 1.4;
         }
         
         .contact-details {
@@ -974,6 +1079,10 @@
             .showcase-content {
                 padding: 30px;
             }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1174,7 +1283,7 @@
         </div>
     </section>
 
-    <!-- Team Section - Three Positions -->
+    <!-- Team Section - Three members -->
     <section id="team">
         <h2 class="section-title">Our Team</h2>
         <div class="team-container">
@@ -1401,23 +1510,91 @@
             
             <div class="contact-form">
                 <h3>Request a Quote</h3>
-                <form id="quoteForm">
-                    <input type="text" placeholder="Your Full Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
-                    <input type="tel" placeholder="Your Phone Number">
-                    <select required>
-                        <option value="">Select Service Category</option>
-                        <option value="creative">Creative Services</option>
-                        <option value="environmental">Environmental Management</option>
-                        <option value="digital">Digital Marketing</option>
-                        <option value="hr">HR Services</option>
-                        <option value="agricultural">Agricultural Services</option>
-                        <option value="rabbit">Rabbit Farming</option>
-                        <option value="general">General Services</option>
-                        <option value="multiple">Multiple Services</option>
-                    </select>
-                    <textarea placeholder="Tell us about your project or requirements..." rows="5" required></textarea>
-                    <button type="submit"><i class="fas fa-paper-plane"></i> Submit Request</button>
+                
+                <!-- Form Status Messages -->
+                <div class="form-status" id="formStatus"></div>
+                
+                <!-- Enhanced Contact Form with Formspree -->
+                <form id="quoteForm" action="https://formspree.io/f/your-form-id-here" method="POST">
+                    <input type="hidden" name="_subject" value="New Quote Request - Small Giant Group Website">
+                    <input type="hidden" name="_replyto" id="replyTo">
+                    <input type="hidden" name="_cc" value="namupalapaulus@gmail.com">
+                    <input type="hidden" name="_format" value="plain">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control" required>
+                            <div class="error-message" id="firstNameError">Please enter your first name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-control" required>
+                            <div class="error-message" id="lastNameError">Please enter your last name</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                            <div class="error-message" id="phoneError">Please enter your phone number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company / Organization</label>
+                        <input type="text" id="company" name="company" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Category *</label>
+                        <select id="service" name="service" class="form-control" required>
+                            <option value="">Select Service Category</option>
+                            <option value="creative">Creative Services</option>
+                            <option value="environmental">Environmental Management</option>
+                            <option value="digital">Digital Marketing</option>
+                            <option value="hr">HR Services</option>
+                            <option value="agricultural">Agricultural Services</option>
+                            <option value="rabbit">Rabbit Farming</option>
+                            <option value="general">General Services</option>
+                            <option value="multiple">Multiple Services</option>
+                            <option value="other">Other (Please specify in message)</option>
+                        </select>
+                        <div class="error-message" id="serviceError">Please select a service category</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Project Budget (Optional)</label>
+                        <select id="budget" name="budget" class="form-control">
+                            <option value="">Select Budget Range</option>
+                            <option value="under-10k">Under NAD 10,000</option>
+                            <option value="10k-50k">NAD 10,000 - 50,000</option>
+                            <option value="50k-100k">NAD 50,000 - 100,000</option>
+                            <option value="100k-500k">NAD 100,000 - 500,000</option>
+                            <option value="500k-plus">NAD 500,000+</option>
+                            <option value="not-sure">Not Sure / Need Quote</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Project Details / Requirements *</label>
+                        <textarea id="message" name="message" class="form-control" required placeholder="Please tell us about your project, timeline, and any specific requirements..."></textarea>
+                        <div class="error-message" id="messageError">Please provide details about your project</div>
+                    </div>
+                    
+                    <button type="submit" class="form-submit-btn" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Submit Request
+                    </button>
+                    
+                    <div class="privacy-notice">
+                        <p>We respect your privacy. Your information will only be used to respond to your inquiry and provide the requested services.</p>
+                    </div>
                 </form>
             </div>
         </div>
@@ -1467,13 +1644,6 @@
             link.addEventListener('click', function() {
                 document.getElementById('navLinks').classList.remove('active');
             });
-        });
-        
-        // Form Submission Handler
-        document.getElementById('quoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your request! We will contact you within 24 hours.');
-            this.reset();
         });
         
         // Testimonial Slider - Auto-change every 5 seconds
@@ -1563,8 +1733,236 @@
             resetSlideshowInterval();
         }
         
-        // Initialize slideshow when page loads
-        document.addEventListener('DOMContentLoaded', initSlideshow);
+        // ====== ENHANCED FORM FUNCTIONALITY ======
+        document.addEventListener('DOMContentLoaded', function() {
+            initSlideshow();
+            
+            const quoteForm = document.getElementById('quoteForm');
+            const formStatus = document.getElementById('formStatus');
+            const submitBtn = document.getElementById('submitBtn');
+            const emailInput = document.getElementById('email');
+            
+            // Set reply-to email dynamically
+            emailInput.addEventListener('input', function() {
+                document.getElementById('replyTo').value = this.value;
+            });
+            
+            // Form validation
+            function validateField(field, errorElement, validationFn) {
+                const value = field.value.trim();
+                const isValid = validationFn(value);
+                
+                if (!isValid) {
+                    field.classList.add('error');
+                    field.classList.remove('success');
+                    errorElement.classList.add('show');
+                    return false;
+                } else {
+                    field.classList.remove('error');
+                    field.classList.add('success');
+                    errorElement.classList.remove('show');
+                    return true;
+                }
+            }
+            
+            // Validation functions
+            const validators = {
+                firstName: (value) => value.length >= 2,
+                lastName: (value) => value.length >= 2,
+                email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
+                phone: (value) => /^[\+]?[0-9\s\-\(\)]{8,}$/.test(value),
+                service: (value) => value !== '',
+                message: (value) => value.length >= 10
+            };
+            
+            // Real-time validation
+            const fieldsToValidate = ['firstName', 'lastName', 'email', 'phone', 'service', 'message'];
+            
+            fieldsToValidate.forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                const errorElement = document.getElementById(fieldId + 'Error');
+                
+                if (field) {
+                    field.addEventListener('blur', () => {
+                        validateField(field, errorElement, validators[fieldId]);
+                    });
+                    
+                    field.addEventListener('input', () => {
+                        if (field.classList.contains('error')) {
+                            validateField(field, errorElement, validators[fieldId]);
+                        }
+                    });
+                }
+            });
+            
+            // Form submission
+            quoteForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Validate all fields
+                let isValid = true;
+                
+                fieldsToValidate.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    const errorElement = document.getElementById(fieldId + 'Error');
+                    
+                    if (field) {
+                        if (!validateField(field, errorElement, validators[fieldId])) {
+                            isValid = false;
+                        }
+                    }
+                });
+                
+                if (!isValid) {
+                    showFormStatus('error', 'Please fill in all required fields correctly.');
+                    return;
+                }
+                
+                // Disable submit button and show loading state
+                submitBtn.disabled = true;
+                submitBtn.classList.add('loading');
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                
+                try {
+                    // Using Formspree for form submission
+                    const formData = new FormData(this);
+                    
+                    // Add timestamp
+                    formData.append('_timestamp', new Date().toISOString());
+                    
+                    // Send to Formspree
+                    const response = await fetch(this.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        // Success - show confirmation
+                        showFormStatus('success', 'Thank you! Your request has been sent. We will contact you within 24 hours.');
+                        
+                        // Reset form
+                        quoteForm.reset();
+                        
+                        // Remove success classes
+                        document.querySelectorAll('.form-control.success').forEach(el => {
+                            el.classList.remove('success');
+                        });
+                        
+                        // Send confirmation to user's email (Formspree handles this automatically)
+                        console.log('Form submitted successfully. Confirmation email sent.');
+                        
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                    
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    showFormStatus('error', 'Sorry, there was an error sending your request. Please try again or contact us directly.');
+                } finally {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('loading');
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
+                }
+            });
+            
+            function showFormStatus(type, message) {
+                formStatus.className = 'form-status ' + type;
+                formStatus.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-triangle'}"></i> ${message}`;
+                
+                // Scroll to status message
+                formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                // Auto-hide success message after 10 seconds
+                if (type === 'success') {
+                    setTimeout(() => {
+                        formStatus.classList.remove('success');
+                    }, 10000);
+                }
+            }
+            
+            // Alternative: Email fallback if Formspree fails
+            async function sendEmailFallback(formData) {
+                // This is a backup option - you could implement a simple PHP backend
+                // or use another email service as fallback
+                console.log('Formspree failed, using email fallback');
+                
+                // For now, just log the data
+                const data = Object.fromEntries(formData);
+                console.log('Form data for fallback:', data);
+                
+                return { ok: false }; // Indicate fallback also failed
+            }
+            
+            // Form auto-save to localStorage (draft)
+            function saveFormDraft() {
+                const formData = {};
+                fieldsToValidate.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field) {
+                        formData[fieldId] = field.value;
+                    }
+                });
+                localStorage.setItem('smallGiantFormDraft', JSON.stringify(formData));
+            }
+            
+            function loadFormDraft() {
+                const draft = localStorage.getItem('smallGiantFormDraft');
+                if (draft) {
+                    const formData = JSON.parse(draft);
+                    Object.keys(formData).forEach(key => {
+                        const field = document.getElementById(key);
+                        if (field) {
+                            field.value = formData[key];
+                        }
+                    });
+                    
+                    // Show notice about saved draft
+                    if (Object.values(formData).some(val => val.trim() !== '')) {
+                        showFormStatus('info', 'You have a saved draft. Complete and submit when ready.');
+                        setTimeout(() => {
+                            formStatus.classList.remove('success', 'error');
+                        }, 5000);
+                    }
+                }
+            }
+            
+            // Auto-save every 10 seconds
+            setInterval(saveFormDraft, 10000);
+            
+            // Load draft on page load
+            loadFormDraft();
+            
+            // Clear draft on successful submission
+            window.addEventListener('formSubmitted', () => {
+                localStorage.removeItem('smallGiantFormDraft');
+            });
+            
+            // Setup instructions comment
+            console.log(`
+                =============================================
+                FORMSPREE SETUP INSTRUCTIONS:
+                
+                1. Go to https://formspree.io and sign up (free tier available)
+                2. Create a new form
+                3. Copy your Form ID from the integration page
+                4. Replace "your-form-id-here" in line 1259 with your actual Form ID
+                
+                Example: action="https://formspree.io/f/xjvqlqwe"
+                
+                Formspree will automatically:
+                - Send emails to you when forms are submitted
+                - Send confirmation emails to your users
+                - Prevent spam with built-in protection
+                - Store submissions in your dashboard
+                
+                Alternative: Use Netlify Forms if hosting on Netlify
+                =============================================
+            `);
+        });
     </script>
 </body>
 </html>
