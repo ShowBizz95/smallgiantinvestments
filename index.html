@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Small Giant Group – Architects of Namibian Legacy Wealth</title>
-    <meta name="description" content="Small Giant Group builds enduring family wealth through strategic ownership of land, agriculture, and essential infrastructure in Namibia.">
-    <meta name="keywords" content="generational wealth Namibia, legacy assets, family business succession, agricultural investment, land development, Namibian wealth creation">
+    <title>Small Giant Group – Sheer Obsession!</title>
+    <meta name="description" content="Small Giant Group - Namibian company providing creative, environmental, HR, agricultural, and general services with sheer obsession!">
+    <meta name="keywords" content="Namibia, Windhoek, business services, environmental management, HR, agriculture, creative services, investment">
     
     <!-- Google Search Console verification -->
     <meta name="google-site-verification" content="ZO5W6xEE0meghcVokTmgeuhNCyXT3OQrnOtre5HU_3U" />
     
-    <!-- Performance Optimization -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://raw.githubusercontent.com">
-    
-    <!-- Favicons -->
+    <!-- ========== PROPER FAVICONS FOR ALL DEVICES ========== -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -26,11 +22,9 @@
     <meta name="msapplication-TileColor" content="#003366">
     <meta name="theme-color" content="#003366">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        /* === CSS RESET & BASE === */
+        /* === BASIC CSS RESET === */
         * {
             margin: 0;
             padding: 0;
@@ -42,132 +36,19 @@
             line-height: 1.6;
             color: #333;
             background-color: #fff;
-            overflow-x: hidden;
         }
         
         html {
             scroll-behavior: smooth;
         }
         
-        /* === VARIABLES === */
-        :root {
-            --primary-blue: #003366;
-            --secondary-blue: #00509e;
-            --accent-gold: #d4af37;
-            --light-gold: #f4e9cd;
-            --light-bg: #f8f9fa;
-            --dark-text: #1a1a1a;
-            --light-text: #666;
-            --white: #ffffff;
-            --shadow: 0 5px 15px rgba(0,0,0,0.08);
-            --shadow-hover: 0 15px 30px rgba(0,0,0,0.12);
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
-        }
-        
-        /* === TYPOGRAPHY === */
-        h1, h2, h3, h4, h5 {
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-        
-        h1 {
-            font-size: 3.2rem;
-        }
-        
-        h2 {
-            font-size: 2.5rem;
-        }
-        
-        h3 {
-            font-size: 1.8rem;
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--accent-gold);
-            border-radius: 2px;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: var(--light-text);
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-        
-        /* === BUTTONS === */
-        .btn {
-            display: inline-block;
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 14px 32px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-            font-size: 1rem;
-            border: 2px solid var(--primary-blue);
-        }
-        
-        .btn:hover {
-            background: var(--secondary-blue);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--secondary-blue);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-blue);
-            border: 2px solid var(--primary-blue);
-        }
-        
-        .btn-outline:hover {
-            background: var(--primary-blue);
-            color: var(--white);
-        }
-        
-        .btn-accent {
-            background: var(--accent-gold);
-            color: var(--primary-blue);
-            border-color: var(--accent-gold);
-        }
-        
-        .btn-accent:hover {
-            background: var(--primary-blue);
-            color: var(--accent-gold);
-        }
-        
         /* === HEADER WITH SLIDESHOW === */
         header {
             position: relative;
-            height: 700px;
+            height: 600px;
             overflow: hidden;
-            color: var(--white);
+            color: white;
+            text-align: center;
         }
         
         .slideshow-container {
@@ -196,6 +77,7 @@
             opacity: 1;
         }
         
+        /* Overlay on slides */
         .slide::before {
             content: "";
             position: absolute;
@@ -203,129 +85,120 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 80, 158, 0.9));
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 80, 158, 0.7));
         }
         
         .header-content {
             position: relative;
             z-index: 2;
-            padding: 180px 20px 100px;
+            padding: 140px 20px 100px;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
         }
         
         .header-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: var(--white);
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .header-content .slogan {
-            font-size: 2.2rem;
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-            font-weight: 700;
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
         
         .header-content .tagline {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             max-width: 800px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 30px;
             font-weight: 300;
-            line-height: 1.4;
         }
         
         .year-badge {
             display: inline-block;
-            background: var(--accent-gold);
-            color: var(--primary-blue);
-            padding: 12px 28px;
+            background: #d4af37;
+            color: #003366;
+            padding: 8px 20px;
             border-radius: 30px;
-            font-weight: 700;
-            margin-top: 2rem;
+            font-weight: bold;
+            margin-top: 15px;
             font-size: 1.1rem;
-            letter-spacing: 1px;
         }
         
-        /* Slideshow Controls */
+        /* Slideshow navigation dots */
         .slideshow-dots {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 0;
             width: 100%;
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             z-index: 3;
         }
         
         .dot {
-            width: 14px;
-            height: 14px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.5);
             cursor: pointer;
-            transition: var(--transition);
-            border: 2px solid transparent;
+            transition: all 0.3s ease;
         }
         
         .dot.active {
-            background-color: var(--accent-gold);
+            background-color: #d4af37;
             transform: scale(1.2);
-            border-color: var(--white);
         }
         
         .dot:hover {
             background-color: rgba(255, 255, 255, 0.8);
         }
         
+        /* Slideshow navigation arrows */
         .slideshow-nav {
             position: absolute;
             top: 50%;
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 0 30px;
+            padding: 0 20px;
             transform: translateY(-50%);
             z-index: 3;
         }
         
         .slideshow-nav button {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: var(--white);
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
             border: none;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             cursor: pointer;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            backdrop-filter: blur(5px);
         }
         
         .slideshow-nav button:hover {
-            background-color: rgba(255, 255, 255, 0.4);
+            background-color: rgba(0, 0, 0, 0.6);
             transform: scale(1.1);
         }
         
         /* === NAVIGATION === */
         nav {
-            background-color: var(--primary-blue);
+            background-color: #003366;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-            border-bottom: 3px solid var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
         .nav-container {
@@ -335,9 +208,10 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 20px;
-            height: 80px;
+            height: 70px;
         }
         
+        /* Updated Logo Styling - Clickable logo */
         .logo {
             display: flex;
             align-items: center;
@@ -347,42 +221,34 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            gap: 15px;
         }
         
         .logo img.logo-image {
-            height: 55px;
+            height: 50px;
             width: auto;
             object-fit: contain;
-            background-color: var(--white);
-            padding: 8px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-            border: 2px solid var(--accent-gold);
-            transition: var(--transition);
+            background-color: white;
+            padding: 6px;
+            border-radius: 6px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
         }
         
+        /* Logo hover effect */
         .logo img.logo-image:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+            border-color: #d4af37;
         }
         
-        .logo-text {
-            display: flex;
-            flex-direction: column;
+        /* Hide the old logo elements */
+        .logo i {
+            display: none;
         }
         
-        .logo-text .main {
-            font-weight: 700;
-            color: var(--white);
-            font-size: 1.4rem;
-        }
-        
-        .logo-text .sub {
-            font-weight: 300;
-            color: var(--light-gold);
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+        .logo span {
+            display: none;
         }
         
         .nav-links {
@@ -394,398 +260,148 @@
         }
         
         .nav-links a {
-            color: var(--white);
-            padding: 0 20px;
+            color: white;
+            padding: 0 18px;
             display: flex;
             align-items: center;
             font-weight: 500;
             text-decoration: none;
-            transition: var(--transition);
+            transition: all 0.3s ease;
             height: 100%;
-            position: relative;
-            font-size: 1rem;
+        }
+        
+        .nav-links a:hover {
+            background-color: #00509e;
+            color: #d4af37;
         }
         
         .nav-links a i {
             margin-right: 8px;
-            font-size: 1.1rem;
-        }
-        
-        .nav-links a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: var(--accent-gold);
-        }
-        
-        .nav-links a:hover:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 20px;
-            right: 20px;
-            height: 3px;
-            background: var(--accent-gold);
         }
         
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            color: var(--white);
-            font-size: 1.8rem;
+            color: white;
+            font-size: 1.5rem;
             cursor: pointer;
             height: 100%;
             padding: 0 15px;
-            transition: var(--transition);
-        }
-        
-        .mobile-menu-btn:hover {
-            color: var(--accent-gold);
         }
         
         /* === SECTIONS === */
         section {
-            padding: 100px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        /* Philosophy Section */
-        #philosophy {
-            background: var(--light-bg);
-            border-radius: 20px;
-            margin: 40px auto;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .philosophy-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .wealth-quote {
-            font-size: 1.5rem;
-            font-style: italic;
+        /* SECTION TITLES - NO UNDERLINES */
+        .section-title {
             text-align: center;
-            max-width: 900px;
-            margin: 0 auto 4rem;
-            padding: 30px;
-            background: var(--white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            border-left: 5px solid var(--accent-gold);
-            color: var(--primary-blue);
-            font-weight: 500;
-        }
-        
-        .philosophy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 2rem;
-        }
-        
-        .philosophy-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: var(--transition);
-            border-top: 4px solid var(--accent-gold);
-        }
-        
-        .philosophy-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .philosophy-card i {
-            font-size: 3rem;
-            color: var(--accent-gold);
-            margin-bottom: 1.5rem;
-        }
-        
-        .philosophy-card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        /* Wealth Pillars Section */
-        .pillar-tabs {
-            background: var(--white);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-        
-        .tab-buttons {
-            display: flex;
-            background: var(--light-bg);
-            border-bottom: 2px solid #e0e0e0;
-        }
-        
-        .tab-btn {
-            flex: 1;
-            padding: 20px;
-            background: none;
-            border: none;
-            font-size: 1.1rem;
+            margin-bottom: 50px;
+            color: #003366;
+            font-size: 2.5rem;
             font-weight: 600;
-            color: var(--light-text);
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
         }
         
-        .tab-btn.active {
-            background: var(--white);
-            color: var(--primary-blue);
-            border-bottom: 3px solid var(--accent-gold);
+        /* Justified text for About section */
+        .about-text p {
+            text-align: justify;
+            margin-bottom: 20px;
         }
         
-        .tab-btn:hover:not(.active) {
-            background: rgba(0, 80, 158, 0.1);
-        }
-        
-        .tab-content {
-            display: none;
-            padding: 40px;
-        }
-        
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .pipeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 2rem;
-        }
-        
-        .pipeline-step {
-            background: var(--light-bg);
-            padding: 25px;
-            border-radius: var(--border-radius);
-            text-align: center;
-            border-left: 4px solid var(--secondary-blue);
-        }
-        
-        .pipeline-step span {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: var(--primary-blue);
-            color: var(--white);
-            border-radius: 50%;
-            line-height: 40px;
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-        
-        .pipeline-step h4 {
-            margin-bottom: 10px;
-            color: var(--primary-blue);
-        }
-        
-        /* Legacy Packages Section */
-        #legacy-packages {
-            background: var(--light-bg);
-        }
-        
-        .package-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 2rem;
-        }
-        
-        .package-card {
-            background: var(--white);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            border-top: 5px solid var(--secondary-blue);
-        }
-        
-        .package-card.premium {
-            border-top-color: var(--accent-gold);
-            transform: scale(1.05);
-        }
-        
-        .package-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-        
-        .package-card.premium:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-        
-        .package-badge {
-            position: absolute;
-            top: 20px;
-            right: -35px;
-            background: var(--accent-gold);
-            color: var(--primary-blue);
-            padding: 8px 40px;
-            transform: rotate(45deg);
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-        
-        .package-card h3 {
-            padding: 30px 30px 10px;
-            font-size: 1.8rem;
-            margin-bottom: 0;
-        }
-        
-        .package-price {
-            padding: 0 30px 20px;
-            color: var(--secondary-blue);
-            font-weight: 600;
-            font-size: 1.1rem;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .package-features {
-            list-style: none;
-            padding: 30px;
-        }
-        
-        .package-features li {
-            padding: 12px 0;
-            border-bottom: 1px dashed #eee;
+        /* About Section */
+        .about-content {
             display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
             align-items: center;
-            gap: 12px;
         }
         
-        .package-features li:last-child {
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .mission-vision {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #d4af37;
+        }
+        
+        .mission-vision h3 {
+            color: #003366;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .mission-vision p {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .mission-vision p:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
             border-bottom: none;
         }
         
-        .package-features i {
-            color: var(--accent-gold);
-            font-size: 1.1rem;
-        }
-        
-        .package-cta {
-            padding: 0 30px 30px;
-            text-align: center;
-        }
-        
-        .timeline {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: var(--light-text);
+        /* Legacy Wisdom Section - Subtle Addition */
+        .legacy-wisdom {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 40px 0;
+            border-left: 5px solid #d4af37;
             font-style: italic;
-        }
-        
-        /* Model Farm Section */
-        .case-study {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            align-items: center;
-            background: var(--white);
-            padding: 40px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-        
-        .case-visual {
-            position: relative;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-        }
-        
-        .case-visual img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: var(--border-radius);
-        }
-        
-        .case-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .stat {
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: var(--border-radius);
             text-align: center;
-            border-top: 3px solid var(--accent-gold);
         }
         
-        .stat h4 {
-            font-size: 0.9rem;
-            color: var(--light-text);
-            margin-bottom: 8px;
-        }
-        
-        .stat p {
+        .legacy-wisdom h3 {
+            color: #003366;
+            margin-bottom: 15px;
             font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin: 0;
         }
         
-        .wealth-cycle {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .cycle-step {
-            background: var(--light-bg);
-            padding: 20px;
-            border-radius: var(--border-radius);
-            border-left: 4px solid var(--secondary-blue);
-        }
-        
-        .cycle-step h4 {
+        .legacy-wisdom p {
+            color: #555;
             font-size: 1.1rem;
-            margin-bottom: 10px;
+            line-height: 1.7;
         }
         
-        /* Team Section */
-        #team {
-            background: var(--light-bg);
-        }
-        
+        /* Team Section - Three members */
         .team-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         
         .team-card {
-            background: var(--white);
-            border-radius: var(--border-radius);
+            background: white;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
             text-align: center;
+            border-top: 4px solid #003366;
+            width: 100%;
+            max-width: 300px;
+            flex: 1;
+            min-width: 280px;
         }
         
         .team-card:hover {
             transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
         
         .team-card img {
@@ -795,42 +411,344 @@
         }
         
         .team-card h3 {
-            padding: 20px 20px 5px;
+            color: #003366;
+            margin: 20px 0 5px;
             font-size: 1.4rem;
         }
         
         .team-card p {
-            padding: 0 20px 20px;
-            color: var(--secondary-blue);
+            color: #00509e;
             font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 1rem;
         }
         
-        .team-card .role-badge {
-            display: inline-block;
-            background: var(--accent-gold);
-            color: var(--primary-blue);
-            padding: 5px 15px;
-            border-radius: 20px;
+        /* For the vacant positions, add a subtle visual cue */
+        .team-card:nth-child(2) h3,
+        .team-card:nth-child(3) h3 {
+            color: #666;
+        }
+        
+        .team-card:nth-child(2) p,
+        .team-card:nth-child(3) p {
+            color: #888;
+            font-style: italic;
+        }
+        
+        /* Portfolio Section */
+        #portfolio {
+            background-color: #f8f9fa;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 51, 102, 0.9));
+            color: white;
+            padding: 20px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Rabbit Farming Showcase - Standout Section */
+        #rabbit-showcase {
+            background: linear-gradient(135deg, #003366 0%, #00509e 100%);
+            color: white;
+            border-radius: 15px;
+            margin: 60px auto;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .showcase-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            min-height: 500px;
+        }
+        
+        .showcase-visual {
+            flex: 1;
+            min-width: 300px;
+            height: 500px;
+            position: relative;
+        }
+        
+        .showcase-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .showcase-content {
+            flex: 1;
+            min-width: 300px;
+            padding: 50px;
+        }
+        
+        .showcase-content h2 {
+            color: #d4af37;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .showcase-content .subtitle {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .showcase-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-box {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .stat-box h3 {
+            color: #d4af37;
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        
+        .stat-box p {
             font-size: 0.9rem;
-            font-weight: 600;
-            margin-top: 5px;
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        .showcase-btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #003366;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid #d4af37;
+        }
+        
+        .showcase-btn:hover {
+            background: transparent;
+            color: #d4af37;
+            transform: translateY(-3px);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-left: 4px solid #d4af37;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: #003366;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .service-card h3 i {
+            color: #d4af37;
+        }
+        
+        .service-card ul {
+            list-style: none;
+        }
+        
+        .service-card li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .service-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00509e;
+            font-weight: bold;
+        }
+        
+        .service-card a {
+            color: #00509e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .service-card a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Testimonials Section */
+        #testimonials {
+            background-color: #f8f9fa;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            min-height: 250px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid #d4af37;
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .testimonial.active {
+            opacity: 1;
+            transform: translateY(0);
+            position: relative;
+        }
+        
+        .testimonial p {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial h4 {
+            color: #003366;
+            text-align: right;
         }
         
         /* Contact Section */
-        #contact {
-            background: var(--white);
+        .contact-section {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 60px;
         }
         
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
             gap: 40px;
+            align-items: flex-start;
         }
         
         .contact-info {
-            background: var(--light-bg);
-            padding: 40px;
-            border-radius: var(--border-radius);
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .contact-form h3 {
+            color: #003366;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .contact-form button {
+            background: #003366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-form button:hover {
+            background: #00509e;
         }
         
         .contact-details {
@@ -838,161 +756,44 @@
         }
         
         .contact-details p {
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e0e0e0;
         }
         
         .contact-details i {
-            color: var(--accent-gold);
-            font-size: 1.2rem;
-            width: 30px;
+            color: #d4af37;
+            width: 20px;
         }
         
         .contact-details a {
-            color: var(--secondary-blue);
+            color: #00509e;
             text-decoration: none;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
         
         .contact-details a:hover {
-            color: var(--primary-blue);
+            color: #003366;
             text-decoration: underline;
         }
         
-        .contact-form {
-            background: var(--white);
-            padding: 40px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--primary-blue);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        /* Map */
+        /* Google Maps */
         .map-container {
             margin-top: 40px;
-            border-radius: var(--border-radius);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border: 1px solid #ddd;
         }
         
-        /* Footer */
-        footer {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 60px 20px 30px;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .mission-statement {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin: 40px 0;
-        }
-        
-        .footer-column h3 {
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .footer-links a:hover {
-            color: var(--accent-gold);
-            transform: translateX(5px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
-        
-        .designer-credit {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .designer-credit a {
-            color: var(--accent-gold);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-        
-        .designer-credit a:hover {
-            color: var(--white);
+        .quote {
+            font-style: italic;
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 20px;
+            border-left: 3px solid #d4af37;
+            background: rgba(255,255,255,0.05);
         }
         
         /* WhatsApp Button */
@@ -1007,56 +808,127 @@
             border-radius: 50%;
             text-align: center;
             font-size: 30px;
-            box-shadow: 2px 2px 12px rgba(0,0,0,0.25);
-            z-index: 1000;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            transition: var(--transition);
+            transition: all 0.3s ease;
         }
         
         .whatsapp-float:hover {
             background-color: #128C7E;
-            transform: scale(1.1) rotate(10deg);
+            transform: scale(1.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 50px 20px 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .passionate-notice {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 1rem;
+            font-style: italic;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* Designer Credit */
+        .designer-credit {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .designer-credit a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .designer-credit a:hover {
+            color: white;
+            transform: translateY(-2px);
         }
         
         /* === RESPONSIVE DESIGN === */
-        @media (max-width: 1100px) {
-            h1 { font-size: 2.8rem; }
-            h2 { font-size: 2.2rem; }
-            
-            .header-content {
-                padding: 150px 20px 80px;
-            }
-        }
-        
         @media (max-width: 992px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header-content .slogan {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
             .nav-links {
                 position: fixed;
-                top: 80px;
+                top: 70px;
                 left: 0;
                 width: 100%;
-                background-color: var(--primary-blue);
+                background-color: #003366;
                 flex-direction: column;
-                align-items: stretch;
+                align-items: flex-start;
                 display: none;
-                box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                height: auto;
+                padding: 10px 0;
+            }
+            
+            .nav-links a {
+                padding: 15px 20px;
+                width: 100%;
                 height: auto;
             }
             
             .nav-links.active {
                 display: flex;
-            }
-            
-            .nav-links a {
-                padding: 20px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                height: auto;
-            }
-            
-            .nav-links a:hover:after {
-                display: none;
             }
             
             .mobile-menu-btn {
@@ -1065,92 +937,126 @@
                 justify-content: center;
             }
             
-            .logo-text {
-                display: none;
+            .contact-section {
+                padding: 40px 20px;
             }
             
-            .tab-buttons {
+            .team-container {
+                gap: 20px;
+            }
+            
+            .team-card {
+                min-width: 250px;
+            }
+            
+            header {
+                height: 500px;
+            }
+            
+            .header-content {
+                padding: 100px 20px 80px;
+            }
+            
+            .slideshow-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .showcase-container {
                 flex-direction: column;
             }
             
-            .tab-btn {
-                padding: 15px;
-                text-align: left;
+            .showcase-visual {
+                height: 300px;
             }
             
-            .package-card.premium {
-                transform: none;
-            }
-            
-            .package-card.premium:hover {
-                transform: translateY(-10px);
+            .showcase-content {
+                padding: 30px;
             }
         }
         
         @media (max-width: 768px) {
-            h1 { font-size: 2.3rem; }
-            h2 { font-size: 1.9rem; }
-            
-            .header-content {
-                padding: 120px 20px 60px;
+            .header-content h1 {
+                font-size: 2rem;
             }
             
             .header-content .slogan {
-                font-size: 1.8rem;
+                font-size: 1.4rem;
             }
             
             .header-content .tagline {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
             }
             
             section {
-                padding: 70px 20px;
+                padding: 60px 20px;
             }
             
-            .wealth-quote {
-                font-size: 1.2rem;
-                padding: 20px;
-            }
-            
-            .form-row {
+            .portfolio-grid,
+            .services-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .logo img.logo-image {
+                height: 45px;
+                padding: 5px;
+            }
+            
+            .nav-container {
+                height: 65px;
+            }
+            
+            .team-card {
+                min-width: 100%;
+                max-width: 350px;
+            }
+            
+            header {
+                height: 450px;
+            }
+            
+            .header-content {
+                padding: 80px 20px 60px;
             }
             
             .slideshow-nav {
                 display: none;
             }
             
-            .case-study {
-                padding: 25px;
+            .showcase-stats {
+                grid-template-columns: 1fr;
             }
         }
         
-        @media (max-width: 576px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.7rem; }
-            
-            .header-content {
-                padding: 100px 20px 50px;
+        @media (max-width: 480px) {
+            .header-content h1 {
+                font-size: 1.8rem;
             }
             
             .header-content .slogan {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             
-            .package-grid {
-                grid-template-columns: 1fr;
+            .section-title {
+                font-size: 1.6rem;
             }
             
-            .philosophy-grid {
-                grid-template-columns: 1fr;
+            .logo img.logo-image {
+                height: 40px;
+                padding: 4px;
             }
             
-            .team-container {
-                grid-template-columns: 1fr;
+            .nav-container {
+                height: 60px;
             }
             
-            .contact-grid {
-                grid-template-columns: 1fr;
+            .nav-links {
+                top: 60px;
             }
             
             .whatsapp-float {
@@ -1160,349 +1066,325 @@
                 height: 50px;
                 font-size: 25px;
             }
+            
+            .team-card {
+                max-width: 300px;
+            }
+            
+            header {
+                height: 400px;
+            }
+            
+            .header-content {
+                padding: 60px 20px 40px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/264818988127?text=Hello%20Small%20Giant%20Group!%20I'm%20interested%20in%20building%20generational%20wealth%20through%20strategic%20assets." 
-       class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/264818988127?text=Hello%20Small%20Giant%20Group!%20I'm%20interested%20in%20your%20services." 
+       class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Header -->
+    <!-- Header with Slideshow -->
     <header>
         <div class="slideshow-container" id="slideshow">
+            <!-- Original image -->
             <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main.jpg');"></div>
+            <!-- New images 1-8 -->
             <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main1.jpg');"></div>
             <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main2.jpg');"></div>
             <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main3.jpg');"></div>
             <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main4.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main5.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main6.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main7.jpg');"></div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_main8.jpg');"></div>
         </div>
         
+        <!-- Slideshow Navigation Arrows -->
         <div class="slideshow-nav">
-            <button id="prevSlide" aria-label="Previous slide">
+            <button id="prevSlide">
                 <i class="fas fa-chevron-left"></i>
             </button>
-            <button id="nextSlide" aria-label="Next slide">
+            <button id="nextSlide">
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
         
-        <div class="slideshow-dots" id="slideDots"></div>
+        <!-- Slideshow Dots -->
+        <div class="slideshow-dots" id="slideDots">
+            <!-- Dots will be generated by JavaScript -->
+        </div>
         
+        <!-- Header Content -->
         <div class="header-content">
             <h1>Small Giant Group</h1>
-            <div class="slogan">Architects of Namibian Legacy Wealth</div>
-            <p class="tagline">We build enduring family wealth through strategic ownership of land, agriculture, and essential infrastructure</p>
-            <div class="year-badge">Building Legacies Since 2023</div>
-            <a href="#contact" class="btn btn-accent" style="margin-top: 30px;">Start Your Legacy Journey</a>
+            <div class="slogan">Sheer Obsession!</div>
+            <p class="tagline">Creating new businesses and helping existing businesses expand</p>
+            <div class="year-badge">Established 2023</div>
         </div>
     </header>
 
-    <!-- Navigation -->
+    <!-- Sticky Navigation -->
     <nav>
         <div class="nav-container">
             <div class="logo">
                 <a href="#">
-                    <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/smallgiantlogo.png" 
-                         alt="Small Giant Group Logo" 
-                         class="logo-image">
-                    <div class="logo-text">
-                        <span class="main">SMALL GIANT GROUP</span>
-                        <span class="sub">LEGACY WEALTH ARCHITECTS</span>
-                    </div>
+                    <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/smallgiantlogo.png" alt="Small Giant Group Logo" class="logo-image">
                 </a>
             </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#philosophy"><i class="fas fa-mountain"></i> Our Philosophy</a></li>
-                <li><a href="#wealth-pillars"><i class="fas fa-layer-group"></i> Wealth Pillars</a></li>
-                <li><a href="#legacy-packages"><i class="fas fa-box-open"></i> Legacy Packages</a></li>
-                <li><a href="#team"><i class="fas fa-users"></i> Legacy Team</a></li>
-                <li><a href="#model-farm"><i class="fas fa-rabbit"></i> Model Farm</a></li>
-                <li><a href="#contact"><i class="fas fa-handshake"></i> Start Legacy</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#team"><i class="fas fa-users"></i> Our Team</a></li>
+                <li><a href="#portfolio"><i class="fas fa-images"></i> Portfolio</a></li>
+                <li><a href="#rabbit-showcase"><i class="fas fa-rabbit"></i> Rabbit Farming</a></li>
+                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="#testimonials"><i class="fas fa-comments"></i> Testimonials</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Philosophy Section -->
-    <section id="philosophy">
-        <h2 class="section-title">The Generational Wealth Philosophy</h2>
-        
-        <blockquote class="wealth-quote">
-            "Generational wealth in Africa is built through long-term ownership of productive assets rather than short-term income chasing. It is the result of ownership, strategic positioning, discipline, and a long-term mindset that prioritizes stability and legacy over quick gains."
-        </blockquote>
-        
-        <div class="philosophy-grid">
-            <div class="philosophy-card">
-                <i class="fas fa-landmark"></i>
-                <h3>Asset Ownership > Income</h3>
-                <p>We focus on creating assets that appreciate with Namibia's growth—land, infrastructure, productive agriculture. These become the foundation for family wealth that lasts generations.</p>
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>Small Giant Group</strong> is a fully Namibian-owned company that was established in 2023 and registered in July 2023 with the Ministry of Trade and Industry and other relevant business bodies.</p>
+                <p>We operate to various specifications and employ dedicated and qualified staff. The group provides services to different clients depending on their needs.</p>
+                <p>Our team is equipped with Industry 4.0 Employability Skills such as Analytical Thinking and Innovation; Reasoning, Problem-solving and Ideation; Complex Problem-solving; Critical Thinking and Analysis; Creativity, Originality and Initiative; Leadership and Social Influence; Technology use, Persuasion and Negotiation.</p>
+                
+                <!-- Subtle Legacy Wisdom Section -->
+                <div class="legacy-wisdom">
+                    <h3><i class="fas fa-lightbulb"></i> Our Philosophy</h3>
+                    <p>"True wealth is built through ownership of productive assets that grow with Namibia—land, agriculture, and essential infrastructure. We help families and businesses create lasting value, not just short-term income."</p>
+                </div>
             </div>
-            <div class="philosophy-card">
-                <i class="fas fa-family"></i>
-                <h3>Family Systems & Governance</h3>
-                <p>Wealth survives through proper governance, financial literacy, and shared values across generations. We help families build systems that protect and grow their legacy.</p>
-            </div>
-            <div class="philosophy-card">
-                <i class="fas fa-chess-board"></i>
-                <h3>Strategic Positioning</h3>
-                <p>Control points in supply chains create durable barriers against competition. We help you own critical infrastructure and distribution networks that ensure lasting advantage.</p>
+            <div class="mission-vision">
+                <h3><i class="fas fa-bullseye"></i> Our Mission & Vision</h3>
+                <p><strong>Mission:</strong> To create new businesses and help existing businesses expand.</p>
+                <p><strong>Vision:</strong> A vibrant rural economy driven by new and growing businesses.</p>
             </div>
         </div>
     </section>
 
-    <!-- Wealth Pillars Section -->
-    <section id="wealth-pillars">
-        <h2 class="section-title">Our Three Wealth Pillars</h2>
-        <p class="section-subtitle">We organize our expertise around the asset classes that build enduring family wealth</p>
-        
-        <div class="pillar-tabs">
-            <div class="tab-buttons">
-                <button class="tab-btn active" data-pillar="land">Strategic Land & Real Estate</button>
-                <button class="tab-btn" data-pillar="agriculture">Productive Agribusiness</button>
-                <button class="tab-btn" data-pillar="infrastructure">Essential Business Infrastructure</button>
+    <!-- Team Section - Three Positions -->
+    <section id="team">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-container">
+            <!-- CEO/Managing Director -->
+            <div class="team-card">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image1_ceo.jpg" alt="Paulus Namupala">
+                <h3>Paulus Namupala</h3>
+                <p>Managing Director / CEO</p>
             </div>
             
-            <div class="tab-content active" id="land-content">
-                <h3>Turning Land into Legacy</h3>
-                <p>We transform undeveloped land into appreciating assets through our integrated development pipeline. From rural plots to urban developments, we maximize land value for generational wealth.</p>
-                
-                <div class="pipeline">
-                    <div class="pipeline-step">
-                        <span>1</span>
-                        <h4>Assessment & Planning</h4>
-                        <p>Environmental Impact Assessments, Strategic Zoning Analysis, Land Valuation & Potential Analysis</p>
-                    </div>
-                    <div class="pipeline-step">
-                        <span>2</span>
-                        <h4>Development & Preparation</h4>
-                        <p>Debushing & Land Clearing, Irrigation Systems Design & Installation, Road Construction & Fencing</p>
-                    </div>
-                    <div class="pipeline-step">
-                        <span>3</span>
-                        <h4>Construction & Asset Creation</h4>
-                        <p>Residential/Commercial Buildings, Processing Facilities, Storage Infrastructure, Value-Adding Structures</p>
-                    </div>
+            <!-- Technical Services Position -->
+            <div class="team-card">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image2_ceo.webp" alt="Technical Services">
+                <h3>Position Available</h3>
+                <p>Technical Services Manager</p>
+            </div>
+            
+            <!-- Administration Services Position -->
+            <div class="team-card">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image3_ceo.webp" alt="Administration Services">
+                <h3>Position Available</h3>
+                <p>Administration Services Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2 class="section-title">Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_marketing.jpg" alt="Creative Signage">
+                <div class="portfolio-overlay">
+                    <h3>Creative Signage</h3>
+                    <p>Brand identity and business signage projects</p>
                 </div>
             </div>
-            
-            <div class="tab-content" id="agriculture-content">
-                <h3>Building Agricultural Wealth</h3>
-                <p>We treat agriculture as a business, not just subsistence. Our integrated approach turns farming operations into profitable, scalable assets that feed families for generations.</p>
-                
-                <div class="pipeline">
-                    <div class="pipeline-step">
-                        <span>1</span>
-                        <h4>Business Planning</h4>
-                        <p>Crop/Livestock Selection, Market Analysis, Financial Projections, Succession Planning Framework</p>
-                    </div>
-                    <div class="pipeline-step">
-                        <span>2</span>
-                        <h4>Infrastructure Development</h4>
-                        <p>Farm Layout & Design, Irrigation Systems, Storage Facilities, Processing Units, Worker Housing</p>
-                    </div>
-                    <div class="pipeline-step">
-                        <span>3</span>
-                        <h4>Operational Excellence</h4>
-                        <p>Management Systems, Quality Control, Distribution Networks, Brand Development & Marketing</p>
-                    </div>
+            <div class="portfolio-item">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_environment.jpg" alt="Environmental Management">
+                <div class="portfolio-overlay">
+                    <h3>Environmental Projects</h3>
+                    <p>EIA assessments and environmental planning</p>
                 </div>
             </div>
-            
-            <div class="tab-content" id="infrastructure-content">
-                <h3>Essential Business Infrastructure</h3>
-                <p>We build the operational backbone that makes assets profitable and sustainable. These are the control points that create durable competitive advantages.</p>
-                
-                <div class="pipeline">
-                    <div class="pipeline-step">
-                        <span>1</span>
-                        <h4>Brand & Identity</h4>
-                        <p>Business Signage, Fleet Branding, Digital Presence, Marketing Strategy, Customer Acquisition Systems</p>
-                    </div>
-                    <div class="pipeline-step">
-                        <span>2</span>
-                        <h4>Human Capital</h4>
-                        <p>HR Systems Development, Talent Management, Performance Systems, Succession Planning</p>
-                    </div>
-                    <div class="pipeline-step">
-                        <span>3</span>
-                        <h4>Security & Operations</h4>
-                        <p>CCTV & Security Systems, Transportation Networks, Maintenance Systems, Operational Protocols</p>
-                    </div>
+            <div class="portfolio-item">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_agriculture.jpg" alt="Agricultural Services">
+                <div class="portfolio-overlay">
+                    <h3>Agricultural Solutions</h3>
+                    <p>Irrigation systems and farming consultancy</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_construction.jpg" alt="Construction Services">
+                <div class="portfolio-overlay">
+                    <h3>Construction & Renovation</h3>
+                    <p>Building and infrastructure projects</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Legacy Packages Section -->
-    <section id="legacy-packages">
-        <h2 class="section-title">Legacy Building Packages</h2>
-        <p class="section-subtitle">We don't just provide services—we deliver complete, income-generating assets designed for multi-generational success</p>
-        
-        <div class="package-grid">
-            <div class="package-card premium">
-                <div class="package-badge">MOST POPULAR</div>
-                <h3>From Bush to Farm</h3>
-                <p class="package-price">Complete Asset Creation Package</p>
-                
-                <ul class="package-features">
-                    <li><i class="fas fa-check-circle"></i> Comprehensive EIA & Land Assessment</li>
-                    <li><i class="fas fa-check-circle"></i> Full Land Clearing & Site Preparation</li>
-                    <li><i class="fas fa-check-circle"></i> Irrigation System Design & Installation</li>
-                    <li><i class="fas fa-check-circle"></i> Core Infrastructure Construction</li>
-                    <li><i class="fas fa-check-circle"></i> Initial Agronomic/Business Consultancy</li>
-                    <li><i class="fas fa-check-circle"></i> 2-Year Operational Support Plan</li>
-                    <li><i class="fas fa-check-circle"></i> Succession Planning Framework</li>
-                    <li><i class="fas fa-check-circle"></i> Legacy Wealth Education for Family</li>
-                </ul>
-                
-                <div class="package-cta">
-                    <a href="#contact" class="btn btn-accent">Schedule Legacy Consultation</a>
-                    <p class="timeline">6-24 Month Transformation Timeline</p>
-                </div>
-            </div>
-            
-            <div class="package-card">
-                <h3>Business Fortification</h3>
-                <p class="package-price">Institutionalize Your Family Business</p>
-                
-                <ul class="package-features">
-                    <li><i class="fas fa-check-circle"></i> Comprehensive Business Process Audit</li>
-                    <li><i class="fas fa-check-circle"></i> HR Systems & Governance Framework</li>
-                    <li><i class="fas fa-check-circle"></i> Brand Identity & Digital Presence Refresh</li>
-                    <li><i class="fas fa-check-circle"></i> Infrastructure Modernization Plan</li>
-                    <li><i class="fas fa-check-circle"></i> Multi-Generational Succession Roadmap</li>
-                    <li><i class="fas fa-check-circle"></i> Legacy Wealth Education Program</li>
-                </ul>
-                
-                <div class="package-cta">
-                    <a href="#contact" class="btn">Strengthen Your Legacy</a>
-                    <p class="timeline">3-12 Month Institutionalization</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Model Farm Section -->
-    <section id="model-farm">
-        <h2 class="section-title">Our Legacy Blueprint: Rabbit Farming</h2>
-        <p class="section-subtitle">A living example of our generational wealth philosophy in action</p>
-        
-        <div class="case-study">
-            <div class="case-visual">
+    <!-- Rabbit Farming Showcase - Standout Section -->
+    <section id="rabbit-showcase">
+        <div class="showcase-container">
+            <div class="showcase-visual">
                 <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image_rabbit.jpg" alt="Rabbit Farming Success">
-                <div class="case-stats">
-                    <div class="stat">
-                        <h4>Asset Value Growth</h4>
-                        <p>300% in 3 Years</p>
-                    </div>
-                    <div class="stat">
-                        <h4>Monthly Cash Flow</h4>
-                        <p>NAD 15,000+</p>
-                    </div>
-                    <div class="stat">
-                        <h4>Employment Created</h4>
-                        <p>5 Full-time Positions</p>
-                    </div>
-                </div>
             </div>
-            
-            <div class="case-details">
-                <h3>The Complete Wealth Cycle Demonstrated</h3>
-                <p>Our rabbit farm showcases the full Small Giant approach to generational wealth creation—from land to legacy.</p>
+            <div class="showcase-content">
+                <h2>Our Legacy Blueprint</h2>
+                <p class="subtitle">Rabbit Farming - A Complete Wealth Creation Model</p>
                 
-                <div class="wealth-cycle">
-                    <div class="cycle-step">
-                        <h4>1. Land & Environmental</h4>
-                        <p>EIA compliance, optimal site selection, sustainable design for long-term viability</p>
+                <p>Our rabbit farm demonstrates how we build sustainable, income-generating assets from the ground up. This isn't just farming—it's a fully integrated business model designed for generational success.</p>
+                
+                <div class="showcase-stats">
+                    <div class="stat-box">
+                        <h3>300%</h3>
+                        <p>Asset Value Growth</p>
                     </div>
-                    <div class="cycle-step">
-                        <h4>2. Infrastructure Development</h4>
-                        <p>Specialized housing construction, irrigation systems, biosecurity fencing, cold storage</p>
+                    <div class="stat-box">
+                        <h3>NAD 15K+</h3>
+                        <p>Monthly Cash Flow</p>
                     </div>
-                    <div class="cycle-step">
-                        <h4>3. Operational Excellence</h4>
-                        <p>HR systems, breeding protocols, veterinary care, quality control, inventory management</p>
-                    </div>
-                    <div class="cycle-step">
-                        <h4>4. Market & Brand</h4>
-                        <p>Premium branding, digital marketing, distribution networks, customer loyalty programs</p>
+                    <div class="stat-box">
+                        <h3>5+</h3>
+                        <p>Jobs Created</p>
                     </div>
                 </div>
                 
-                <a href="https://showbizz95.github.io/" target="_blank" class="btn-outline btn">
-                    <i class="fas fa-external-link-alt"></i> Visit Our Model Farm Website
+                <p>From land acquisition and environmental planning to breeding programs and market distribution, we handle every aspect of creating a profitable agricultural asset.</p>
+                
+                <a href="https://showbizz95.github.io/" target="_blank" class="showcase-btn">
+                    <i class="fas fa-external-link-alt"></i> Visit Our Model Farm
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team">
-        <h2 class="section-title">Our Legacy Team</h2>
-        <p class="section-subtitle">Experts dedicated to building your family's multi-generational wealth</p>
-        
-        <div class="team-container">
-            <div class="team-card">
-                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image1_ceo.jpg" alt="Paulus Namupala">
-                <h3>Paulus Namupala</h3>
-                <div class="role-badge">Founder & Legacy Wealth Strategist</div>
-                <p>With deep expertise in asset development and family business systems, Paulus guides families in creating lasting wealth structures.</p>
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3><i class="fas fa-paint-brush"></i> Creative Services</h3>
+                <ul>
+                    <li>Brand Audits</li>
+                    <li>Fleet Graphics & Sign Writing</li>
+                    <li>COVID & Safety Signage</li>
+                    <li>Poster Signage & Floor Graphics</li>
+                    <li>PPE Products & Face Shields</li>
+                    <li>Perspex Dividers & Sneeze Guards</li>
+                </ul>
             </div>
-            
-            <div class="team-card">
-                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image2_ceo.webp" alt="Technical Services">
-                <h3>Position Available</h3>
-                <div class="role-badge">Asset Development Director</div>
-                <p>We're seeking an expert to lead our land development and infrastructure projects—turning raw land into generational assets.</p>
+            <div class="service-card">
+                <h3><i class="fas fa-leaf"></i> Environmental Management</h3>
+                <ul>
+                    <li>Environmental Impact Assessments (EIAs)</li>
+                    <li>Environmental Management Plans (EMPs)</li>
+                    <li>Waste Management & Pollution Control</li>
+                    <li>Environmental Monitoring</li>
+                    <li>Legal Compliance Evaluation</li>
+                    <li>Rehabilitation Plans</li>
+                </ul>
             </div>
-            
-            <div class="team-card">
-                <img src="https://raw.githubusercontent.com/ShowBizz95/smallgiantinvestments/main/image3_ceo.webp" alt="Administration Services">
-                <h3>Position Available</h3>
-                <div class="role-badge">Family Business Governance Advisor</div>
-                <p>Join us to help families build the systems and governance that ensure wealth survives and thrives across generations.</p>
+            <div class="service-card">
+                <h3><i class="fas fa-laptop-code"></i> Digital Marketing</h3>
+                <ul>
+                    <li>Content Writing</li>
+                    <li>Website Analysis & Optimization</li>
+                    <li>Social Media Marketing</li>
+                    <li>Email Marketing & Multimedia</li>
+                    <li>Website Creation</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-users-cog"></i> HR Services</h3>
+                <ul>
+                    <li>Attraction & Retention Strategies</li>
+                    <li>Job Evaluation & Profiling</li>
+                    <li>Career Development & Talent Management</li>
+                    <li>Performance Management</li>
+                    <li>Remuneration Strategy & Policy</li>
+                    <li>Compliance with Legislation</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-tractor"></i> Agricultural Services</h3>
+                <ul>
+                    <li>Land Evaluation</li>
+                    <li>Irrigation System Installations</li>
+                    <li>Water Tank Stands/Tower Welding</li>
+                    <li>Agricultural Shade Net Supply</li>
+                    <li>Chemical Insecticide/Herbicide</li>
+                    <li>Agricultural Consultancy</li>
+                    <li><a href="https://showbizz95.github.io/" target="_blank">Rabbit Farming & Production</a></li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <h3><i class="fas fa-tools"></i> General Services</h3>
+                <ul>
+                    <li>Transportation & Renovation</li>
+                    <li>De-bushing & Welding</li>
+                    <li>Plumbing & Road Construction</li>
+                    <li>CCTV & Alarm Installation</li>
+                    <li>Electrical Fencing</li>
+                    <li>Cleaning Services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <p>"Small Giant Group transformed our business signage with incredible professionalism and attention to detail. Their creative team understood our brand perfectly!"</p>
+                <h4>- Local Retail Business, Windhoek</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The environmental management plan they developed for our farm was comprehensive and compliant with all regulations. Highly recommended for agricultural services!"</p>
+                <h4>- Farm Owner, Omaheke Region</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Their HR services helped us streamline our recruitment process and develop effective retention strategies. Our employee satisfaction has improved significantly."</p>
+                <h4>- SME Business Owner</h4>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Start Your Legacy Journey</h2>
-        <p class="section-subtitle">Begin building generational wealth that will benefit your family for decades to come</p>
-        
-        <div class="contact-grid">
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-content">
             <div class="contact-info">
-                <h3>Let's Build Your Legacy Together</h3>
-                <p>We work with forward-thinking families and investors who understand that true wealth is built through strategic asset ownership, not quick profits.</p>
+                <h3>Get in Touch</h3>
+                <p>We're ready to help your business grow. Contact us for more information about our services or request a free quote.</p>
                 
                 <div class="contact-details">
-                    <p>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:+264818988127">+264 81 8988 127</a>
-                    </p>
-                    <p>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:namupalapaulus@gmail.com">namupalapaulus@gmail.com</a>
-                    </p>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i>
-                        1066 Etwangoma Street, Windhoek, Namibia
-                    </p>
-                    <p>
-                        <i class="fas fa-globe"></i>
-                        <a href="https://www.smallgiant.org" target="_blank">www.smallgiant.org</a>
-                    </p>
-                    <p>
-                        <i class="fas fa-book"></i>
-                        <a href="https://showbizz95.github.io/" target="_blank">Visit Our Model Rabbit Farm</a>
-                    </p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+264818988127">+264 81 8988 127</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:namupalapaulus@gmail.com">namupalapaulus@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> 1066 Etwangoma Street, Windhoek, Namibia</p>
+                    <p><i class="fas fa-globe"></i> <a href="https://www.smallgiant.org" target="_blank">www.smallgiant.org</a></p>
+                    <p><i class="fas fa-rabbit"></i> <a href="https://showbizz95.github.io/" target="_blank">Visit Rabbit Farm Website</a></p>
                 </div>
                 
+                <div class="quote">
+                    <p>"Every problem is a gift - without problems we would not grow."</p>
+                </div>
+                
+                <!-- Google Maps -->
                 <div class="map-container">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119190.28587641013!2d17.0113655!3d-22.56088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c0b1b3b3b3b3b3b%3A0x3b3b3b3b3b3b3b!2sWindhoek%2C%20Namibia!5e0!3m2!1sen!2s!4v1691234567890!5m2!1sen!2s" 
@@ -1518,66 +1400,24 @@
             </div>
             
             <div class="contact-form">
-                <h3>Request Legacy Consultation</h3>
-                <form id="legacyForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" class="form-control" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="familyStatus">Family/Business Status *</label>
-                        <select id="familyStatus" class="form-control" required>
-                            <option value="">Select your situation</option>
-                            <option value="family">Family with land/assets</option>
-                            <option value="business">Family business owner</option>
-                            <option value="investor">Investor looking for opportunities</option>
-                            <option value="starting">Starting from scratch</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="interest">Primary Interest *</label>
-                        <select id="interest" class="form-control" required>
-                            <option value="">Select area of interest</option>
-                            <option value="land">Land Development & Real Estate</option>
-                            <option value="agriculture">Agricultural Business</option>
-                            <option value="succession">Family Business Succession</option>
-                            <option value="infrastructure">Business Infrastructure</option>
-                            <option value="multiple">Multiple Areas</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Tell us about your legacy goals *</label>
-                        <textarea id="message" class="form-control" rows="5" required placeholder="What kind of legacy do you want to build for your family? What assets are you considering? What timeframe are you thinking about?"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-accent" style="width: 100%;">
-                        <i class="fas fa-paper-plane"></i> Submit Legacy Request
-                    </button>
-                    
-                    <p style="margin-top: 15px; font-size: 0.9rem; text-align: center; color: var(--light-text);">
-                        We respond within 24 hours to schedule your personal legacy consultation
-                    </p>
+                <h3>Request a Quote</h3>
+                <form id="quoteForm">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="tel" placeholder="Your Phone Number">
+                    <select required>
+                        <option value="">Select Service Category</option>
+                        <option value="creative">Creative Services</option>
+                        <option value="environmental">Environmental Management</option>
+                        <option value="digital">Digital Marketing</option>
+                        <option value="hr">HR Services</option>
+                        <option value="agricultural">Agricultural Services</option>
+                        <option value="rabbit">Rabbit Farming</option>
+                        <option value="general">General Services</option>
+                        <option value="multiple">Multiple Services</option>
+                    </select>
+                    <textarea placeholder="Tell us about your project or requirements..." rows="5" required></textarea>
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Submit Request</button>
                 </form>
             </div>
         </div>
@@ -1586,48 +1426,27 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="mission-statement">
-                <p>We are architects of enduring Namibian wealth. Our mission is to build the productive assets—land, agriculture, and essential infrastructure—that become the foundation for family legacies that last generations.</p>
+            <div class="passionate-notice">
+                <p>We are passionate about service delivery to existing and new businesses, and we understand that customer service is the backbone of any business.</p>
             </div>
             
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Legacy Wealth Pillars</h3>
-                    <ul class="footer-links">
-                        <li><a href="#wealth-pillars"><i class="fas fa-chevron-right"></i> Strategic Land & Real Estate</a></li>
-                        <li><a href="#wealth-pillars"><i class="fas fa-chevron-right"></i> Productive Agribusiness</a></li>
-                        <li><a href="#wealth-pillars"><i class="fas fa-chevron-right"></i> Essential Infrastructure</a></li>
-                        <li><a href="#model-farm"><i class="fas fa-chevron-right"></i> Rabbit Farming Model</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Legacy Building</h3>
-                    <ul class="footer-links">
-                        <li><a href="#legacy-packages"><i class="fas fa-chevron-right"></i> From Bush to Farm Package</a></li>
-                        <li><a href="#legacy-packages"><i class="fas fa-chevron-right"></i> Business Fortification</a></li>
-                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Legacy Consultation</a></li>
-                        <li><a href="#philosophy"><i class="fas fa-chevron-right"></i> Wealth Philosophy</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Connect With Us</h3>
-                    <ul class="footer-links">
-                        <li><a href="tel:+264818988127"><i class="fas fa-phone"></i> +264 81 8988 127</a></li>
-                        <li><a href="mailto:namupalapaulus@gmail.com"><i class="fas fa-envelope"></i> namupalapaulus@gmail.com</a></li>
-                        <li><a href="https://wa.me/264818988127" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a></li>
-                        <li><a href="https://showbizz95.github.io/" target="_blank"><i class="fas fa-external-link-alt"></i> Model Farm Website</a></li>
-                    </ul>
-                </div>
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#team">Our Team</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#rabbit-showcase">Rabbit Farming</a>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023-2026 Small Giant Group – Architects of Namibian Legacy Wealth. All rights reserved.</p>
+                <p>&copy; 2023-2026 Small Giant Group – Sheer Obsession! All rights reserved.</p>
                 <p>Fully Namibian-owned | Registered with Ministry of Trade and Industry</p>
-                <p style="margin-top: 15px; font-size: 0.8rem;">Website designed with passion for building enduring Namibian legacies</p>
+                <p style="margin-top: 15px; font-size: 0.8rem;">Building lasting value through productive assets and excellent service</p>
             </div>
             
+            <!-- Designer Credit -->
             <div class="designer-credit">
                 <a href="https://www.smallgiant.org" target="_blank">
                     <i class="fas fa-rocket"></i> Designed by Small Giant Group
@@ -1639,84 +1458,48 @@
     <!-- JavaScript -->
     <script>
         // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
         });
         
-        // Close menu when clicking a link
+        // Close mobile menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            link.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.remove('active');
             });
         });
         
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            }
-        });
-        
-        // Form Submission
-        document.getElementById('legacyForm').addEventListener('submit', async function(e) {
+        // Form Submission Handler
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission (replace with actual API call)
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Success message
-            alert('Thank you for your legacy consultation request! We will contact you within 24 hours to schedule your personal consultation.');
+            alert('Thank you for your request! We will contact you within 24 hours.');
             this.reset();
-            
-            // Reset button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
         });
         
-        // Wealth Pillars Tabs
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
+        // Testimonial Slider - Auto-change every 5 seconds
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+        const totalTestimonials = testimonials.length;
         
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const pillar = btn.getAttribute('data-pillar');
-                
-                // Remove active class from all buttons and contents
-                tabBtns.forEach(b => b.classList.remove('active'));
-                tabContents.forEach(c => c.classList.remove('active'));
-                
-                // Add active class to clicked button
-                btn.classList.add('active');
-                
-                // Show corresponding content
-                document.getElementById(`${pillar}-content`).classList.add('active');
-            });
-        });
+        function showNextTestimonial() {
+            testimonials[currentTestimonial].classList.remove('active');
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            testimonials[currentTestimonial].classList.add('active');
+        }
         
-        // ====== HEADER SLIDESHOW ======
+        if (totalTestimonials > 0) {
+            setInterval(showNextTestimonial, 5000);
+        }
+        
+        // ====== HEADER SLIDESHOW FUNCTIONALITY ======
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
         let slideshowInterval;
         
-        // Create dots
+        // Create dots for slideshow
         function createDots() {
             const dotsContainer = document.getElementById('slideDots');
-            dotsContainer.innerHTML = '';
             
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('div');
@@ -1755,10 +1538,10 @@
             goToSlide(prev);
         }
         
-        // Reset interval
+        // Reset slideshow interval
         function resetSlideshowInterval() {
             clearInterval(slideshowInterval);
-            slideshowInterval = setInterval(nextSlide, 6000);
+            slideshowInterval = setInterval(nextSlide, 5000);
         }
         
         // Initialize slideshow
@@ -1780,51 +1563,8 @@
             resetSlideshowInterval();
         }
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if(this.getAttribute('href') === '#') return;
-                
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            initSlideshow();
-            
-            // Add scroll animation for sections
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if(entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe all sections
-            document.querySelectorAll('section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                observer.observe(section);
-            });
-        });
+        // Initialize slideshow when page loads
+        document.addEventListener('DOMContentLoaded', initSlideshow);
     </script>
 </body>
 </html>
