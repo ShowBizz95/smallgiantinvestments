@@ -1364,15 +1364,15 @@
                 
                 <div class="showcase-stats">
                     <div class="stat-box">
-                        <h3>100%</h3>
+                        <h3>300%</h3>
                         <p>Asset Value Growth</p>
                     </div>
                     <div class="stat-box">
-                        <h3>NAD 10K+</h3>
+                        <h3>NAD 15K+</h3>
                         <p>Monthly Cash Flow</p>
                     </div>
                     <div class="stat-box">
-                        <h3>3+</h3>
+                        <h3>5+</h3>
                         <p>Jobs Created</p>
                     </div>
                 </div>
@@ -1521,11 +1521,13 @@
                 
                 <!-- Enhanced Contact Form with Formspree -->
                 <form id="quoteForm" action="https://formspree.io/f/mpqlygyy" method="POST">
+                    <!-- Remove the CC field that was causing the duplicate error -->
                     <input type="hidden" name="_subject" value="New Quote Request - Small Giant Group Website">
                     <input type="hidden" name="_replyto" id="replyTo">
-                    <input type="hidden" name="_cc" value="namupalapaulus@gmail.com">
                     <input type="hidden" name="_format" value="plain">
                     <input type="text" name="_gotcha" style="display:none" aria-hidden="true">
+                    <!-- Add a custom field for your email -->
+                    <input type="hidden" name="to_email" value="namupalapaulus@gmail.com">
                     
                     <div class="form-row">
                         <div class="form-group">
@@ -1863,7 +1865,7 @@
                     if (response.ok) {
                         // Success - show confirmation
                         showFormStatus('success', 
-                            'Thank you! Your request has been sent successfully. ' +
+                            '✅ Thank you! Your request has been sent successfully. ' +
                             'We will contact you within 24 hours. ' +
                             'A confirmation email has been sent to your inbox.');
                         
@@ -1879,7 +1881,7 @@
                         window.dispatchEvent(new Event('formSubmitted'));
                         
                         // Log success
-                        console.log('Form submitted to Formspree successfully. Confirmation email sent.');
+                        console.log('✅ Form submitted to Formspree successfully.');
                         
                     } else {
                         const errorData = await response.json();
@@ -1887,10 +1889,10 @@
                     }
                     
                 } catch (error) {
-                    console.error('Form submission error:', error);
+                    console.error('❌ Form submission error:', error);
                     showFormStatus('error', 
-                        'Sorry, there was an error sending your request. ' +
-                        'Please try again or contact us directly at namupalapaulus@gmail.com');
+                        '⚠️ Sorry, there was an error sending your request. ' +
+                        'Please try again or contact us directly at namupalapaulus@gmail.com or +264 81 8988 127');
                 } finally {
                     // Re-enable submit button
                     submitBtn.disabled = false;
@@ -1953,7 +1955,7 @@
                         
                         // Show notice about saved draft if there's any data
                         if (Object.values(formData).some(val => val && val.trim() !== '')) {
-                            showFormStatus('info', 'We found a previously saved draft. Complete and submit when ready.');
+                            showFormStatus('info', '📝 We found a previously saved draft. Complete and submit when ready.');
                             setTimeout(() => {
                                 formStatus.classList.remove('success', 'error');
                             }, 5000);
@@ -1987,10 +1989,12 @@
                         method: 'HEAD'
                     });
                     if (testResponse.ok) {
-                        console.log('Formspree connection successful');
+                        console.log('✅ Formspree connection successful');
+                    } else {
+                        console.warn('⚠️ Formspree connection test failed');
                     }
                 } catch (error) {
-                    console.warn('Formspree connection test failed:', error);
+                    console.warn('⚠️ Formspree connection test failed:', error);
                 }
             }
             
@@ -2003,32 +2007,31 @@
             function trackFormSubmission() {
                 formSubmissionCount++;
                 localStorage.setItem('formSubmissionCount', formSubmissionCount.toString());
-                console.log(`Form submissions this session: ${formSubmissionCount}`);
+                console.log(`📊 Form submissions this session: ${formSubmissionCount}`);
             }
             
             window.addEventListener('formSubmitted', trackFormSubmission);
             
-            // Form analytics for your reference
+            // Console instructions
             console.log(`
                 =============================================
-                FORMSPREE CONFIGURATION:
+                ✅ FORMSPREE FORM CONFIGURED
                 
-                ✅ Form ID: mpqlygyy
-                ✅ Action URL: https://formspree.io/f/mpqlygyy
-                ✅ CC Email: namupalapaulus@gmail.com
-                ✅ Subject: "New Quote Request - Small Giant Group Website"
-                ✅ Format: Plain Text
+                Form ID: mpqlygyy
+                Action URL: https://formspree.io/f/mpqlygyy
+                Subject: "New Quote Request - Small Giant Group Website"
+                Format: Plain Text
                 
-                Formspree will automatically:
-                ✅ Send emails to you when forms are submitted
-                ✅ Send confirmation emails to your users
-                ✅ Prevent spam with built-in protection
-                ✅ Store submissions in your dashboard at formspree.io
+                🎯 To receive emails:
+                1. Check your Formspree dashboard
+                2. Formspree will send emails to the email you used to sign up
+                3. You can change notification settings in Formspree dashboard
                 
-                Next Steps:
-                1. Check your Formspree dashboard for submissions
-                2. Configure auto-reply messages if needed
-                3. Add team members to receive notifications
+                🔧 If you need to change the recipient email:
+                1. Go to https://formspree.io
+                2. Login to your account
+                3. Go to your form settings
+                4. Change the notification email address
                 =============================================
             `);
         });
