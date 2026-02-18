@@ -312,17 +312,31 @@
             margin-bottom: 20px;
         }
         
-        /* About Section */
+        /* About Section - Alignment fixes only */
+        #about {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
         .about-content {
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
-            align-items: center;
+            align-items: stretch;
         }
         
         .about-text {
             flex: 1;
             min-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .about-text p {
+            text-align: justify;
+            margin-bottom: 20px;
+            line-height: 1.7;
         }
         
         .mission-vision {
@@ -332,18 +346,23 @@
             padding: 30px;
             border-radius: 8px;
             border-left: 5px solid #d4af37;
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
         }
         
         .mission-vision h3 {
             color: #003366;
             margin-bottom: 20px;
             font-size: 1.5rem;
+            text-align: left;
         }
         
         .mission-vision p {
             margin-bottom: 25px;
             padding-bottom: 25px;
             border-bottom: 1px solid #ddd;
+            line-height: 1.7;
         }
         
         .mission-vision p:last-child {
@@ -352,27 +371,36 @@
             border-bottom: none;
         }
         
-        /* Legacy Wisdom Section - Subtle Addition */
+        /* Legacy Wisdom Section - Alignment fixes only */
         .legacy-wisdom {
             background: #f8f9fa;
             border-radius: 10px;
             padding: 30px;
-            margin: 40px 0;
+            margin: 30px 0 0 0;
             border-left: 5px solid #d4af37;
             font-style: italic;
-            text-align: center;
+            text-align: left;
         }
         
         .legacy-wisdom h3 {
             color: #003366;
             margin-bottom: 15px;
             font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legacy-wisdom h3 i {
+            color: #d4af37;
+            font-size: 1.5rem;
         }
         
         .legacy-wisdom p {
             color: #555;
             font-size: 1.1rem;
             line-height: 1.7;
+            margin: 0;
         }
         
         /* Team Section - Three members */
